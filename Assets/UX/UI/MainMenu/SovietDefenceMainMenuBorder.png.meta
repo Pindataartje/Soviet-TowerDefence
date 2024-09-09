@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: dad2096f339ab334ba2b32849caf5a27
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26272735980f3f840a3b77b264ca89ea
+      internalID: 832317261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1043
+        width: 223
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2d13aa83470e049bf94a2668237e8d
+      internalID: -2069826822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1061
+        width: 176
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927d1f4ba2f8ad049a716aa3ce7a797e
+      internalID: -1595518146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_3
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 997
+        width: 759
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1674199e0e82f074ea1d6b5e4b02d515
+      internalID: -178347921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_4
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1061
+        width: 176
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5bd39f914e88f468934dddb931e5e8
+      internalID: -1512538266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_5
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1043
+        width: 223
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92924bb62444f7544818b88bd8a6155b
+      internalID: -694766546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_6
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 846
+        width: 222
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49336e324f5232c4aa55d7a74b6ee9fe
+      internalID: 1847526886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 677
+        width: 37
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af451dbcff13b844b14a5733e6f27b1
+      internalID: 2061302673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 648
+        width: 9
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92177dbe075f4674d865b6bf343b7628
+      internalID: -1484065793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_9
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 677
+        width: 37
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8efe8c9f8da8a943a2628debafcfe97
+      internalID: 2003135426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_10
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 648
+        width: 9
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a46fa45f23cc124a8f0971f3b372b46
+      internalID: -1208994433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 37
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4898dc2cda9eb6444878bc04c06d3d7e
+      internalID: 664154049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 256
+        width: 9
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f179cd1d9cb9b448ce391fcec72d28
+      internalID: -650340419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_13
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 180
+        width: 37
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef86131695c334940a7569623ae2987a
+      internalID: -1754349740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_14
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 256
+        width: 9
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459d86277e9c12247925a753406928e2
+      internalID: 86936084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 11
+        width: 222
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6491a41087f46af4ab7209cca867b5a2
+      internalID: 1674007934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_16
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 223
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd077373db9d22448be675120107af6d
+      internalID: -33227962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 10
+        width: 176
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545f0be439db6fb45ae8a735c9a4aaf7
+      internalID: 1201489055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_18
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1
+        width: 759
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dac1084c757366478ada8e941f6f0b0
+      internalID: 84304401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_19
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 10
+        width: 176
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f82aa079fc9479488e82b440abf7080
+      internalID: -423705664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_20
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 0
+        width: 223
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ca9e0af64df7641a3f06e952e0370a
+      internalID: 496722676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SovietDefenceMainMenuBorder_21
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 12
+        width: 223
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92000e52a4563c4faa72e4660b8d93e
+      internalID: -753169405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 52df9b502ae779d49a7f8f23df1356bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SovietDefenceMainMenuBorder_0: 832317261
+      SovietDefenceMainMenuBorder_1: -2069826822
+      SovietDefenceMainMenuBorder_10: -1208994433
+      SovietDefenceMainMenuBorder_11: 664154049
+      SovietDefenceMainMenuBorder_12: -650340419
+      SovietDefenceMainMenuBorder_13: -1754349740
+      SovietDefenceMainMenuBorder_14: 86936084
+      SovietDefenceMainMenuBorder_15: 1674007934
+      SovietDefenceMainMenuBorder_16: -33227962
+      SovietDefenceMainMenuBorder_17: 1201489055
+      SovietDefenceMainMenuBorder_18: 84304401
+      SovietDefenceMainMenuBorder_19: -423705664
+      SovietDefenceMainMenuBorder_2: -1595518146
+      SovietDefenceMainMenuBorder_20: 496722676
+      SovietDefenceMainMenuBorder_21: -753169405
+      SovietDefenceMainMenuBorder_3: -178347921
+      SovietDefenceMainMenuBorder_4: -1512538266
+      SovietDefenceMainMenuBorder_5: -694766546
+      SovietDefenceMainMenuBorder_6: 1847526886
+      SovietDefenceMainMenuBorder_7: 2061302673
+      SovietDefenceMainMenuBorder_8: -1484065793
+      SovietDefenceMainMenuBorder_9: 2003135426
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
