@@ -1,0 +1,1038 @@
+fileFormatVersion: 2
+guid: 5068dbeaf59ac4b4db64622a4750b24d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a34fa7c1710c2a48bf36eee1bf395b0
+      internalID: 466726157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 566
+        width: 132
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1965a23980fd639428d239c773d64b41
+      internalID: 377549824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_2
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 576
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec0508b567d404469eb9052190b8980
+      internalID: 594865628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_3
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 579
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a086dce530cbe40bd7d4f6b2014717
+      internalID: 93217687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_4
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 586
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3df0e31508f26f48aa1c4fe8b3f33d2
+      internalID: 949226700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_5
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 601
+        width: 12
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dadb8f11dc4c3f46a1e23958ecae3d5
+      internalID: 86302253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_6
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 601
+        width: 12
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd092fd53ad753849b43a4bb5b5bcc95
+      internalID: -1851187321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_7
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 586
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd18acc42907a1f4ab9ddb20354e96da
+      internalID: -2098292572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_8
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 579
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dfc3bf0fe406549825f71dd8b55ffa
+      internalID: 467963109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_9
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 576
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76383d9a7c3d0bf43847c04d5b172cb6
+      internalID: 897045430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_10
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 541
+        width: 219
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544a1e57af4d7f84b92f77e2cd766dd0
+      internalID: 1379052424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 566
+        width: 131
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8e0e13ef7264244a3be981da4dad13
+      internalID: -1636878580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9a0e7ae0bacc441bce69ad116f1c98
+      internalID: -1287361947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_13
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 560
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954d82342d1764b49911ed8349e3f5c7
+      internalID: -1342903586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_14
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 563
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d922133843fc332459b2b995b8e28bb7
+      internalID: -292866489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_15
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 565
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0b8c3ce04992d4884bdc13c2f18daf
+      internalID: -1125760705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_16
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 565
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2322fd71dac46d345992f0d3027eaada
+      internalID: 352799798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_17
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 563
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b72067a3035e2144bb8603d6dcef321
+      internalID: 801977425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_18
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 560
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ad3266af49ead499989fd46a45206f
+      internalID: -934294899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_19
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 113
+        width: 265
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db99d3a641744ac4db4efafb2041f2ee
+      internalID: -124821882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_20
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 553
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a6a0fb148df484eb6c34202d76a46a
+      internalID: 1203869045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 553
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce29301774130c34da10c04f309849a7
+      internalID: 1316650025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_22
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 99
+        width: 219
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d416918d0b0b856429a4dd0fbf7cbb18
+      internalID: -1277645232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_23
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 136
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a827a369105fb40a035b6acdce2bc1
+      internalID: -1021955530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_24
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 129
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e926b24ed59d342973e06e365f4036
+      internalID: -964151033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_25
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 126
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b43643f2254084fa17db93b9d12e47
+      internalID: -1007937389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_26
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 126
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1245552162f5cc64cbc6a51dee12098e
+      internalID: 1406510969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_27
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 129
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91ffd3ec49f556488f088bd7aae940e
+      internalID: -1835807788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_28
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 136
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a584effb5a421c2469fecf5f3a5b348c
+      internalID: 1464421402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_29
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 99
+        width: 219
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13101ac7e091abc499c3e4da77bdf65c
+      internalID: -645446015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_30
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 45
+        width: 132
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da5359dbcb199948ab5a6d3f11ed6f1
+      internalID: -383517072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_31
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 124
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c343c717fae0c45bb984625c7dc185
+      internalID: -1408367535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_32
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 124
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef4abcd294f60d459e0ec0c95e07807
+      internalID: -1492864826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_33
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 45
+        width: 131
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb146630c00ead94bb11a6e37ad076fd
+      internalID: -1866286120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_34
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 98
+        width: 106
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857dcf9282e966e4db4c26998a013641
+      internalID: -1087845919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_35
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 85
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fe5f9cdd668a146818ab5ad796e521
+      internalID: -156785183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_36
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 63
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0509449b860c99e45b6a55c697384254
+      internalID: -430850256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_37
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 58
+        width: 12
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f5782d4be664c45b53f63c8ea89f5b
+      internalID: -63096681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_38
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 58
+        width: 12
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f72fa27217abac4ea6a34efd4400ab7
+      internalID: -116470110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_39
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 63
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7be9b0a2637d9f44b7b116324e5a940
+      internalID: -654434965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_40
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 85
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071472823856fc1449fa5f9fe6ee207f
+      internalID: -873571767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ontwerp zonder titel (78)_41
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 98
+        width: 106
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669190c4ddd209a448e97fafc0d49c77
+      internalID: 1227423163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ab31984e842517e41b7412d517e5f60b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ontwerp zonder titel (78)_0: 466726157
+      Ontwerp zonder titel (78)_1: 377549824
+      Ontwerp zonder titel (78)_10: 1379052424
+      Ontwerp zonder titel (78)_11: -1636878580
+      Ontwerp zonder titel (78)_12: -1287361947
+      Ontwerp zonder titel (78)_13: -1342903586
+      Ontwerp zonder titel (78)_14: -292866489
+      Ontwerp zonder titel (78)_15: -1125760705
+      Ontwerp zonder titel (78)_16: 352799798
+      Ontwerp zonder titel (78)_17: 801977425
+      Ontwerp zonder titel (78)_18: -934294899
+      Ontwerp zonder titel (78)_19: -124821882
+      Ontwerp zonder titel (78)_2: 594865628
+      Ontwerp zonder titel (78)_20: 1203869045
+      Ontwerp zonder titel (78)_21: 1316650025
+      Ontwerp zonder titel (78)_22: -1277645232
+      Ontwerp zonder titel (78)_23: -1021955530
+      Ontwerp zonder titel (78)_24: -964151033
+      Ontwerp zonder titel (78)_25: -1007937389
+      Ontwerp zonder titel (78)_26: 1406510969
+      Ontwerp zonder titel (78)_27: -1835807788
+      Ontwerp zonder titel (78)_28: 1464421402
+      Ontwerp zonder titel (78)_29: -645446015
+      Ontwerp zonder titel (78)_3: 93217687
+      Ontwerp zonder titel (78)_30: -383517072
+      Ontwerp zonder titel (78)_31: -1408367535
+      Ontwerp zonder titel (78)_32: -1492864826
+      Ontwerp zonder titel (78)_33: -1866286120
+      Ontwerp zonder titel (78)_34: -1087845919
+      Ontwerp zonder titel (78)_35: -156785183
+      Ontwerp zonder titel (78)_36: -430850256
+      Ontwerp zonder titel (78)_37: -63096681
+      Ontwerp zonder titel (78)_38: -116470110
+      Ontwerp zonder titel (78)_39: -654434965
+      Ontwerp zonder titel (78)_4: 949226700
+      Ontwerp zonder titel (78)_40: -873571767
+      Ontwerp zonder titel (78)_41: 1227423163
+      Ontwerp zonder titel (78)_5: 86302253
+      Ontwerp zonder titel (78)_6: -1851187321
+      Ontwerp zonder titel (78)_7: -2098292572
+      Ontwerp zonder titel (78)_8: 467963109
+      Ontwerp zonder titel (78)_9: 897045430
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
