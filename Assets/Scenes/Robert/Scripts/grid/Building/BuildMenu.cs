@@ -6,13 +6,20 @@ using UnityEngine.UI;
 
 public class BuildMenu : MonoBehaviour
 {
-    public GameObject Grid;
-
     public Button[] towerButtons;
+
     public GameObject[] towerVignettePrefabs;
+    public GameObject selectedVignette;
+
+    public GameObject[] towers;
+
+    public GameObject[] towersInMap;
 
     public int selectedTowerNumber;
 
+    public GameObject buildMenuUI;
+
+    public bool buildMenuIsOpen = false;
     public bool towerBeingPlaced = false;
     private void Start()
     {
@@ -22,22 +29,45 @@ public class BuildMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.B))
         {
-
+            if (!buildMenuIsOpen)
+            {
+                buildMenuUI.SetActive(true);
+                buildMenuIsOpen = true;
+            }
+            else
+            {
+                buildMenuUI.SetActive(false);
+                buildMenuIsOpen = false;
+            }
         }
         Selecting();
     }
-    public void ButtonFinder()
+    public void TowerOne()
     {
-        towerButtons[0].onClick.AddListener(delegate { TowerPicker(0); });
-        towerButtons[1].onClick.AddListener(delegate { TowerPicker(1); });
-        towerButtons[2].onClick.AddListener(delegate { TowerPicker(2); });
-        towerButtons[3].onClick.AddListener(delegate { TowerPicker(3); });
+        selectedVignette = Instantiate(towerVignettePrefabs[0]);
+
+        selectedTowerNumber = 0;
+        towerBeingPlaced = true;
     }
-    private void TowerPicker(int towerNumber)
+    public void TowerTwo()
     {
-        Instantiate(towerVignettePrefabs[towerNumber]);
-        Debug.Log(towerNumber);
-        selectedTowerNumber = towerNumber;
+        selectedVignette = Instantiate(towerVignettePrefabs[1]);
+
+        selectedTowerNumber = 1;
+        towerBeingPlaced = true;
+    }
+    public void TowerThree()
+    {
+        selectedVignette = Instantiate(towerVignettePrefabs[2]);
+
+        selectedTowerNumber = 2;
+        towerBeingPlaced = true;
+    }
+    public void TowerFour()
+    {
+        selectedVignette = Instantiate(towerVignettePrefabs[3]);
+
+        selectedTowerNumber = 3;
         towerBeingPlaced = true;
     }
 
@@ -45,8 +75,6 @@ public class BuildMenu : MonoBehaviour
     {
         if (towerBeingPlaced)
         {
-            Grid.SetActive(true);
-
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -57,9 +85,17 @@ public class BuildMenu : MonoBehaviour
                     Debug.Log("You Can Place");
                     if (Input.GetKeyDown(KeyCode.Mouse0))
                     {
-                        Grid.SetActive(false);
+                        Debug.Log(selectedVignette.transform.position);
+                        Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
 
                         towerBeingPlaced = false;
+
+                        buildMenuUI.SetActive(false);
+                        buildMenuIsOpen = false;
+
+                        Destroy(selectedVignette);
+
+                        Debug.Log("Tower is placed");
                     }
                 }
                 if (hit.transform.tag == "EnemyPath")
