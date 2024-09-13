@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: cc1953b34e2d3604fb8acbef1de2c478
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 1920
+        height: 529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a1edf3183de6b428eb72bfa99c9b15
+      internalID: 1316372233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 854
+        width: 85
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cd82bfc530f03449c39861929fed14
+      internalID: 155018632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 854
+        width: 81
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e8c5d6f32f4c742a948bacab38534e
+      internalID: 1833189405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 854
+        width: 94
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfeb088f7f222914394dfba3388e4f46
+      internalID: 1590066300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_4
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 853
+        width: 83
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0558ade14f4aad2438950f698f6ac130
+      internalID: -558124973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 853
+        width: 82
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4a9b9710021f5478bad8c0a5f74496
+      internalID: -442080258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_6
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 852
+        width: 85
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72127d84943c6b148a95bbfe38d0f976
+      internalID: 1403092793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 853
+        width: 82
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcc2921e2cb1774785a2c31f59d6e8e
+      internalID: -675057159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 854
+        width: 84
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bacde46cc6c0324d933318780b363b3
+      internalID: -1197493803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 854
+        width: 81
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef6008407fa6524da2c1c657a1676ce
+      internalID: -469929727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 854
+        width: 94
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1671376adee040646a346c3ea8a0a1fc
+      internalID: 462272100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 853
+        width: 83
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4e41b0e74bd2148817e05f30c5d7fb
+      internalID: -1706396519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 853
+        width: 82
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628c84d7cf4f2fd4eb64e987e528333c
+      internalID: 1842247450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 648
+        width: 98
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d84edcf2cd92504ba87022631160cac
+      internalID: -77683662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 648
+        width: 91
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc4e71ada71ada4387ed1bcbcc55c5b
+      internalID: 367762839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_15
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 648
+        width: 82
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190b740c966d77045ba40460ee52a2f5
+      internalID: -1103829453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_16
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 648
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74cfe97199628843850c82ccd4b4f92
+      internalID: -1103073490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 648
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ca4d82ce54a94b84a3d096fbe1fd9
+      internalID: 2008688496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_18
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 647
+        width: 84
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863062124d2f7694984ce5391ae0b0ed
+      internalID: 927570176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_19
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 623
+        width: 84
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bfd99203764ac4081ad4ed3683e313
+      internalID: -1490880786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_20
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 647
+        width: 83
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2426102d2f235ac44a59382b589f98bf
+      internalID: 650164921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 648
+        width: 78
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896858e70b61420418c6fb6446a11306
+      internalID: 1162349105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 648
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955ab5d307b8f3f45bf7b71dc8e00fbb
+      internalID: -1158635656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 647
+        width: 70
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf70bbf0c42628418f0ca7fc6438251
+      internalID: 1512301014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 480
+        width: 921
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec87d154dd7df4a860849163e0a829
+      internalID: 1559370962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_25
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 450
+        width: 250
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9dd762a283d144c8ee0fd7b6eb5b99
+      internalID: -831823115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARE YOU SURE YOU WANT TO QUIT (1)_26
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 480
+        width: 922
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e625baea742ef4c869d2c279503639
+      internalID: -504566181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0888483864411ea4785d57e5e45193d2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ARE YOU SURE YOU WANT TO QUIT (1)_0: 1316372233
+      ARE YOU SURE YOU WANT TO QUIT (1)_1: 155018632
+      ARE YOU SURE YOU WANT TO QUIT (1)_10: 462272100
+      ARE YOU SURE YOU WANT TO QUIT (1)_11: -1706396519
+      ARE YOU SURE YOU WANT TO QUIT (1)_12: 1842247450
+      ARE YOU SURE YOU WANT TO QUIT (1)_13: -77683662
+      ARE YOU SURE YOU WANT TO QUIT (1)_14: 367762839
+      ARE YOU SURE YOU WANT TO QUIT (1)_15: -1103829453
+      ARE YOU SURE YOU WANT TO QUIT (1)_16: -1103073490
+      ARE YOU SURE YOU WANT TO QUIT (1)_17: 2008688496
+      ARE YOU SURE YOU WANT TO QUIT (1)_18: 927570176
+      ARE YOU SURE YOU WANT TO QUIT (1)_19: -1490880786
+      ARE YOU SURE YOU WANT TO QUIT (1)_2: 1833189405
+      ARE YOU SURE YOU WANT TO QUIT (1)_20: 650164921
+      ARE YOU SURE YOU WANT TO QUIT (1)_21: 1162349105
+      ARE YOU SURE YOU WANT TO QUIT (1)_22: -1158635656
+      ARE YOU SURE YOU WANT TO QUIT (1)_23: 1512301014
+      ARE YOU SURE YOU WANT TO QUIT (1)_24: 1559370962
+      ARE YOU SURE YOU WANT TO QUIT (1)_25: -831823115
+      ARE YOU SURE YOU WANT TO QUIT (1)_26: -504566181
+      ARE YOU SURE YOU WANT TO QUIT (1)_3: 1590066300
+      ARE YOU SURE YOU WANT TO QUIT (1)_4: -558124973
+      ARE YOU SURE YOU WANT TO QUIT (1)_5: -442080258
+      ARE YOU SURE YOU WANT TO QUIT (1)_6: 1403092793
+      ARE YOU SURE YOU WANT TO QUIT (1)_7: -675057159
+      ARE YOU SURE YOU WANT TO QUIT (1)_8: -1197493803
+      ARE YOU SURE YOU WANT TO QUIT (1)_9: -469929727
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
