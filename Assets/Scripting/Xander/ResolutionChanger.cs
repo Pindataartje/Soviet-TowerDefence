@@ -43,6 +43,9 @@ public class ResolutionChanger : MonoBehaviour
         InitializeResolution();
         InitializeVolume();
 
+        // Start in fullscreen mode
+        SetFullscreen();
+
         // Add listeners to sliders to handle volume changes
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
@@ -120,16 +123,15 @@ public class ResolutionChanger : MonoBehaviour
         }
     }
 
-    public void ToggleFullscreen()
+    public void SetFullscreen()
     {
-        if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
-        }
-        else
-        {
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        }
+        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        UpdateFullscreenWindowedDisplay();
+    }
+
+    public void SetWindowed()
+    {
+        Screen.fullScreenMode = FullScreenMode.Windowed;
         UpdateFullscreenWindowedDisplay();
     }
 
