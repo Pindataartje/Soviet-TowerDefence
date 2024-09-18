@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a436982281fa83f4ca82160e1e784308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPathObject: []
