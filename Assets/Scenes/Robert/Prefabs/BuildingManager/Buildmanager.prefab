@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2601961353309830718}
   m_Layer: 0
   m_Name: Buildmanager
-  m_TagString: Untagged
+  m_TagString: BuildManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,14 +50,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   towerVignettePrefabs:
-  - {fileID: 7798627774020098304, guid: c57a143a8ee49bc46804e6ee8b4751c4, type: 3}
+  - {fileID: 2876643005864001147, guid: 38fc765af5e80324ebd189ba4eb38d08, type: 3}
   - {fileID: 3768108764957789551, guid: 51be8804af58318418777370b90a56e1, type: 3}
   selectedVignette: {fileID: 0}
   towers:
-  - {fileID: 7798627774020098304, guid: 2dd830303089a5043bee3a3e93cdca43, type: 3}
+  - {fileID: 2876643005864001147, guid: c9c4e358c5342e141887be69c6e18f09, type: 3}
   - {fileID: 3768108764957789551, guid: b97dd2cfaeb2e674c8ed66ffd534314e, type: 3}
   towersInMap: []
   selectedTowerNumber: 0
   buildMenuUI: {fileID: 0}
-  buildMenuIsOpen: 0
-  towerBeingPlaced: 0
+  towerIsNotOnPath: 1

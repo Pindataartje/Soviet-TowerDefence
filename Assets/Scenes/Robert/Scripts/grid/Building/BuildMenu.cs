@@ -19,12 +19,9 @@ public class BuildMenu : MonoBehaviour
 
     public GameObject buildMenuUI;
 
-    public bool buildMenuIsOpen = false;
-    public bool towerBeingPlaced = false;
-    private void Start()
-    {
-
-    }
+    bool buildMenuIsOpen = false;
+    bool towerBeingPlaced = false;
+    public bool towerIsNotOnPath = true;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.B))
@@ -75,33 +72,26 @@ public class BuildMenu : MonoBehaviour
     {
         if (towerBeingPlaced)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100))
+            if(towerIsNotOnPath)
             {
-                if (hit.transform.tag == "Buildable")
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    Debug.Log("You Can Place");
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
-                    {
-                        Debug.Log(selectedVignette.transform.position);
-                        Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
+                    Debug.Log(selectedVignette.transform.position);
+                    Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
 
-                        towerBeingPlaced = false;
+                    towerBeingPlaced = false;
 
-                        buildMenuUI.SetActive(false);
-                        buildMenuIsOpen = false;
+                    buildMenuUI.SetActive(false);
+                    buildMenuIsOpen = false;
 
-                        Destroy(selectedVignette);
+                    Destroy(selectedVignette);
 
-                        Debug.Log("Tower is placed");
-                    }
+                    Debug.Log("Tower is placed");
                 }
-                if (hit.transform.tag == "EnemyPath")
-                {
-                    Debug.Log("Its not really smart to place here");
-                }
+            }
+            else
+            {
+                Debug.Log("Its not really smart to place here");
             }
         }
     }

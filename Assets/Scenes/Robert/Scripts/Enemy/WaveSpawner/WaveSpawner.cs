@@ -46,8 +46,8 @@ public class WaveSpawner : MonoBehaviour
     {
         if (!noMoreWaves)
         {
-            enemyCounterText.text = enemyCount.ToString();
-            if (/*enemyCount == 0 && */!spawningWave)
+            enemyCounterText.text = enemies.Count.ToString();
+            if (enemies.Count == 0 && !spawningWave)
             {
                 currentWave++;
                 waveCountdown = timeBetweenWaves;
@@ -81,7 +81,6 @@ public class WaveSpawner : MonoBehaviour
                 {
                     GameObject enemy = Instantiate(enemyPrefabs[e], spawnPoint.transform.position, spawnPoint.transform.rotation);
                     enemies.Add(enemy);
-                    enemyCount++;
                     yield return new WaitForSeconds(timeBetweenSpawns);
                 }
             }

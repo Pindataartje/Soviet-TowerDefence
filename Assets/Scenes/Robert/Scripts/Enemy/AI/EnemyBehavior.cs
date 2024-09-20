@@ -68,7 +68,8 @@ public class EnemyBehavior : MonoBehaviour
         enemyHealth -= damage;
         if(enemyHealth <= 0)
         {
-            waveSpawner.enemies.Remove(gameObject);
+            int thisGameobjectIndex = waveSpawner.enemies.IndexOf(gameObject);
+            waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
             Destroy(gameObject);
         }
     }
