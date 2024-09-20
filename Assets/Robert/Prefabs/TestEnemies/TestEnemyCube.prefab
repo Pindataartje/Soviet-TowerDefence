@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e25f81a034e6b448856bd6573672704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 30
   killCash: 0
   hpBar: {fileID: 0}
 --- !u!195 &4277659802012720830
