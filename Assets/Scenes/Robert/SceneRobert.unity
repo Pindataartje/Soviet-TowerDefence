@@ -1606,7 +1606,7 @@ GameObject:
   - component: {fileID: 851663989}
   m_Layer: 0
   m_Name: BuildableTerrain 2
-  m_TagString: Buildable
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 982513647}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,7 +1896,7 @@ GameObject:
   - component: {fileID: 1228307745}
   m_Layer: 0
   m_Name: EnemyPath 2
-  m_TagString: EnemyPath
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2012,7 +2012,7 @@ GameObject:
   - component: {fileID: 1284437885}
   m_Layer: 0
   m_Name: EnemyPath
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2063,8 +2063,8 @@ Transform:
   m_GameObject: {fileID: 1371681681}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.446949, y: 11.6, z: -41.767166}
-  m_LocalScale: {x: 1.4016176, y: 17.2, z: 67.79851}
+  m_LocalPosition: {x: 8.446949, y: 24.7763, z: -41.7672}
+  m_LocalScale: {x: 1.4016176, y: 43.55212, z: 67.79851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982513647}
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 1380642537}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2438,8 +2438,8 @@ Transform:
   m_GameObject: {fileID: 1480850478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.446949, y: 11.6, z: 24.432837}
-  m_LocalScale: {x: 1.4016176, y: 17.2, z: 67.79851}
+  m_LocalPosition: {x: 8.446949, y: 24.7763, z: 24.432837}
+  m_LocalScale: {x: 1.4016176, y: 43.55212, z: 67.79851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982513647}
@@ -2545,8 +2545,8 @@ Transform:
   m_GameObject: {fileID: 1501347795}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.04695, y: 11.6, z: -8.717717}
-  m_LocalScale: {x: 1.4016178, y: 17.2, z: 67.79851}
+  m_LocalPosition: {x: 42.04695, y: 24.7763, z: -8.717717}
+  m_LocalScale: {x: 1.4016178, y: 43.55212, z: 67.79851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982513647}
@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 1655430271}
   m_Layer: 0
   m_Name: Enemypath 3
-  m_TagString: EnemyPath
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3046,7 +3046,7 @@ GameObject:
   - component: {fileID: 1949344431}
   m_Layer: 0
   m_Name: BuildableTerrain 1
-  m_TagString: Buildable
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3167,8 +3167,8 @@ Transform:
   m_GameObject: {fileID: 2062300024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.153053, y: 11.6, z: -8.717717}
-  m_LocalScale: {x: 1.4016178, y: 17.2, z: 67.79851}
+  m_LocalPosition: {x: -24.153053, y: 24.7763, z: -8.717717}
+  m_LocalScale: {x: 1.4016178, y: 43.55212, z: 67.79851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982513647}
@@ -3516,6 +3516,12 @@ PrefabInstance:
       objectReference: {fileID: 642266109}
     - target: {fileID: 2601961353309830718, guid: 10eecbedcb48a48408f471055d2c99e7,
         type: 3}
+      propertyPath: 'towers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5765468455594958159, guid: 78cece8a98930814ab0b36382e72fb89,
+        type: 3}
+    - target: {fileID: 2601961353309830718, guid: 10eecbedcb48a48408f471055d2c99e7,
+        type: 3}
       propertyPath: 'towerButtons.Array.data[0]'
       value: 
       objectReference: {fileID: 1018350407}
@@ -3539,6 +3545,12 @@ PrefabInstance:
       propertyPath: 'towerVignettePrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 2876643005864001147, guid: 38fc765af5e80324ebd189ba4eb38d08,
+        type: 3}
+    - target: {fileID: 2601961353309830718, guid: 10eecbedcb48a48408f471055d2c99e7,
+        type: 3}
+      propertyPath: 'towerVignettePrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2087048912402179419, guid: 87316aad89435264388d524b81294b6b,
         type: 3}
     - target: {fileID: 2739324392672240516, guid: 10eecbedcb48a48408f471055d2c99e7,
         type: 3}
@@ -3618,6 +3630,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1417796696399540213, guid: cfae44fa2e93e9540b61a5d44a724c7a,
+        type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417796696399540213, guid: cfae44fa2e93e9540b61a5d44a724c7a,
+        type: 3}
+      propertyPath: distanceGroundToCamera
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2430132766469561264, guid: cfae44fa2e93e9540b61a5d44a724c7a,
         type: 3}
       propertyPath: m_Name
@@ -3693,7 +3715,7 @@ GameObject:
   - component: {fileID: 9050819125179208424}
   m_Layer: 0
   m_Name: EnemyPath 1
-  m_TagString: EnemyPath
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3709,7 +3731,7 @@ GameObject:
   - component: {fileID: 4852895036591773618}
   m_Layer: 0
   m_Name: map
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

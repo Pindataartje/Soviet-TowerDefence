@@ -12,6 +12,8 @@ public class CameraMovement : MonoBehaviour
 
     public float speed;
 
+    public float distanceGroundToCamera;
+
     float horizontal;
     float vertical;
 
@@ -32,6 +34,10 @@ public class CameraMovement : MonoBehaviour
         moveDirection.z = vertical;
 
         rb.MovePosition(transform.position + moveDirection * speed * Time.deltaTime);
+        if(horizontal == 0 && vertical == 0)
+        {
+            transform.position = transform.position;
+        }
 
         if(goBackToSpawn)
         {
@@ -48,12 +54,34 @@ public class CameraMovement : MonoBehaviour
                 goBackToSpawn = false;
             }
         }
+        StayAtSameHeight();
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.tag == "Border")
         {
             goBackToSpawn = true;
+        }
+    }
+    public void StayAtSameHeight()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
+        {
+            if (hit.transform.tag == "Ground")
+            {
+                float soupGetal = distanceGroundToCamera - hit.distance;
+                if (hit.distance < distanceGroundToCamera)
+                {
+                    transform.position += new Vector3(0, soupGetal, 0);
+                }
+
+                float negatifSoupGetal = hit.distance - distanceGroundToCamera;
+                if(hit.distance > distanceGroundToCamera)
+                {
+                    transform.position -= new Vector3(0, negatifSoupGetal, 0);
+                }
+            }
         }
     }
 }

@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
-public class BunkerAi : MonoBehaviour
+public class SniperTowerAI : MonoBehaviour
 {
     SphereCollider detectArea;
     public List<GameObject> targetsInArea = new List<GameObject>();
@@ -16,7 +15,7 @@ public class BunkerAi : MonoBehaviour
     public float radius;
 
     bool isShooting;
-    
+
     void Start()
     {
         SetRadius();
@@ -24,7 +23,7 @@ public class BunkerAi : MonoBehaviour
     #region Update
     private void Update()
     {
-        if(targetsInArea.Count > 0)
+        if (targetsInArea.Count > 0)
         {
             if (targetsInArea[0] == null)
             {
@@ -35,7 +34,7 @@ public class BunkerAi : MonoBehaviour
                 targetedEnemy = targetsInArea[0];
                 shootingPoint.transform.LookAt(targetedEnemy.transform.position);
             }
-            if(!isShooting)
+            if (!isShooting)
             {
                 StartCoroutine(FireRate(fireSpeed));
             }
@@ -75,7 +74,7 @@ public class BunkerAi : MonoBehaviour
     {
         Debug.Log("Shooting Bullet");
         RaycastHit hit;
-        if(Physics.Raycast(shootingPoint.transform.position, shootingPoint.transform.forward, out hit, radius))
+        if (Physics.Raycast(shootingPoint.transform.position, shootingPoint.transform.forward, out hit, radius))
         {
             Debug.Log("raycast hit something");
             if (hit.transform.tag == "Enemy")

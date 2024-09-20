@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Buildable
-  - EnemyPath
   - Border
   - SpawnPoint
   - Enemy
   - TowerVignette
   - BuildManager
+  - Ground
   layers:
   - Default
   - TransparentFX
