@@ -7224,22 +7224,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3598b65afcd14e935ff8b8b65d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerButtons:
-  - {fileID: 5197556219283044790}
-  - {fileID: 2605231275053723617}
-  - {fileID: 8123521057575404178}
-  - {fileID: 7570545938343196864}
   towerVignettePrefabs:
   - {fileID: 2876643005864001147, guid: 38fc765af5e80324ebd189ba4eb38d08, type: 3}
-  - {fileID: 5765468455594958159, guid: 78cece8a98930814ab0b36382e72fb89, type: 3}
+  - {fileID: 2087048912402179419, guid: 87316aad89435264388d524b81294b6b, type: 3}
   selectedVignette: {fileID: 0}
   towers:
   - {fileID: 2876643005864001147, guid: c9c4e358c5342e141887be69c6e18f09, type: 3}
-  - {fileID: 2087048912402179419, guid: 87316aad89435264388d524b81294b6b, type: 3}
+  - {fileID: 5765468455594958159, guid: 78cece8a98930814ab0b36382e72fb89, type: 3}
   towersInMap: []
-  selectedTowerNumber: 0
-  buildMenuUI: {fileID: 1897333741091776500}
   towerIsNotOnPath: 1
+  buildMenuUI: {fileID: 1897333741091776500}
 --- !u!114 &2605231275053723617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8174,7 +8168,7 @@ Transform:
   m_GameObject: {fileID: 2534950983642557728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 361.3, y: 26.002213, z: 432.7}
+  m_LocalPosition: {x: 361.3, y: 32.66, z: 423.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

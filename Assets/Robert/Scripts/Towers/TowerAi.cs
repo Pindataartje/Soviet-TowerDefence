@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
-public class BunkerAi : MonoBehaviour
+public class TowerAi : MonoBehaviour
 {
     SphereCollider detectArea;
     public List<GameObject> targetsInArea = new List<GameObject>();
-    GameObject targetedEnemy;
 
-    public GameObject shootingPoint;
     [Header("Stats")]
-    public int damage;
+    public float damage;
     public float fireSpeed;
     public float radius;
 
@@ -29,11 +27,6 @@ public class BunkerAi : MonoBehaviour
             if (targetsInArea[0] == null)
             {
                 targetsInArea.RemoveAt(0);
-            }
-            else
-            {
-                targetedEnemy = targetsInArea[0];
-                shootingPoint.transform.LookAt(targetedEnemy.transform.position);
             }
             if(!isShooting)
             {
@@ -64,32 +57,18 @@ public class BunkerAi : MonoBehaviour
     IEnumerator FireRate(float speed)
     {
         isShooting = true;
-        ShootBullet();
+
+        EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
+        enemy.EnemyTakeDamage(damage);
+        if (enemy.enemyHealth <= 0)
+        {
+            int destroyedEnemyInArea = targetsInArea.IndexOf(enemy.gameObject);
+            targetsInArea.RemoveAt(destroyedEnemyInArea);
+        }
         Debug.Log("shooting");
+
         yield return new WaitForSeconds(speed);
         isShooting = false;
-    }
-    #endregion
-    #region ShootBullet
-    public void ShootBullet()
-    {
-        Debug.Log("Shooting Bullet");
-        RaycastHit hit;
-        if(Physics.Raycast(shootingPoint.transform.position, shootingPoint.transform.forward, out hit, radius))
-        {
-            Debug.Log("raycast hit something");
-            if (hit.transform.tag == "Enemy")
-            {
-                Debug.Log("Hit enemy");
-                EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>();
-                enemy.EnemyTakeDamage(damage);
-                if (enemy.enemyHealth <= 0)
-                {
-                    int destroyedEnemyInArea = targetsInArea.IndexOf(hit.transform.gameObject);
-                    targetsInArea.RemoveAt(destroyedEnemyInArea);
-                }
-            }
-        }
     }
     #endregion
     #region SetRadius

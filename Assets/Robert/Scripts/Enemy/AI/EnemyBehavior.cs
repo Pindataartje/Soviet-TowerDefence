@@ -16,7 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 target;
 
     [Header("Enemy Stats")]
-    public int enemyHealth;
+    public float enemyHealth;
     public int killCash;
 
     [Header("UI")]
@@ -63,7 +63,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
     #endregion
-    public void EnemyTakeDamage(int damage)
+    public void EnemyTakeDamage(float damage)
     {
         enemyHealth -= damage;
         if(enemyHealth <= 0)

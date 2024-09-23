@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SelectedTower : MonoBehaviour
 {
+    [Header("Tower Layer")]
+    public LayerMask placementLayer;
+    [Space]
     public float rotateSpeed;
     public bool objectIsOnPath;
     BuildMenu buildMenu;
@@ -28,7 +31,7 @@ public class SelectedTower : MonoBehaviour
         }
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100))
+        if (Physics.Raycast(ray, out hit, 100, placementLayer))
         {
             transform.position = hit.point;
         }
