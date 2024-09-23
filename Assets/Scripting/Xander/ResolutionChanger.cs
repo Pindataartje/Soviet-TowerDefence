@@ -43,8 +43,8 @@ public class ResolutionChanger : MonoBehaviour
         InitializeResolution();
         InitializeVolume();
 
-        // Start in fullscreen mode
-        SetFullscreen();
+        // Start in fullscreen mode or use saved settings
+        UpdateFullscreenWindowedDisplay();
 
         // Add listeners to sliders to handle volume changes
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
@@ -60,6 +60,8 @@ public class ResolutionChanger : MonoBehaviour
 
         // Apply loaded settings
         currentResolutionIndex = savedResolutionIndex;
+        musicSlider.value = savedMusicVolume * 100f;
+        sfxSlider.value = savedSFXVolume * 100f;
     }
 
     private void InitializeResolution()
@@ -70,11 +72,6 @@ public class ResolutionChanger : MonoBehaviour
 
     private void InitializeVolume()
     {
-        // Initialize sliders with saved values
-        musicSlider.value = savedMusicVolume * 100f;
-        sfxSlider.value = savedSFXVolume * 100f;
-
-        // Apply the initial volume settings
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
     }
@@ -86,11 +83,6 @@ public class ResolutionChanger : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", musicSlider.value / 100f);
         PlayerPrefs.SetFloat("SFXVolume", sfxSlider.value / 100f);
         PlayerPrefs.Save();
-
-        // Update saved settings to current settings
-        savedResolutionIndex = currentResolutionIndex;
-        savedMusicVolume = musicSlider.value / 100f;
-        savedSFXVolume = sfxSlider.value / 100f;
     }
 
     public void ResetToSavedSettings()
@@ -140,6 +132,7 @@ public class ResolutionChanger : MonoBehaviour
         Resolution resolution = resolutions[currentResolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 
+        // Update active images based on resolution index
         image1024x576.SetActive(currentResolutionIndex == 0);
         image1152x648.SetActive(currentResolutionIndex == 1);
         image1280x720.SetActive(currentResolutionIndex == 2);
