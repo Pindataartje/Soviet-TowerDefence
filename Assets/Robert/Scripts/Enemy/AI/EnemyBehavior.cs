@@ -17,13 +17,24 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Enemy Stats")]
     public float enemyHealth;
+    float currentHealth;
     public int killCash;
 
     [Header("UI")]
     public Slider hpBar;
 
+    GameObject buildmanager;
+    BuildMenu buildmenu;
+
     void Start()
     {
+        hpBar.maxValue = enemyHealth;
+        hpBar.value = enemyHealth;
+        currentHealth = enemyHealth;
+        buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
+        buildmenu = buildmanager.GetComponent<BuildMenu>();
+
+
         agent = GetComponent<NavMeshAgent>();
         checkpointParent = GameObject.FindGameObjectWithTag("SpawnPoint");
         waveSpawner = checkpointParent.GetComponentInParent<WaveSpawner>();
@@ -65,9 +76,11 @@ public class EnemyBehavior : MonoBehaviour
     #endregion
     public void EnemyTakeDamage(float damage)
     {
-        enemyHealth -= damage;
-        if(enemyHealth <= 0)
+        currentHealth -= damage;
+        hpBar.value = currentHealth;
+        if(currentHealth <= 0)
         {
+            buildmenu.currency += killCash;
             int thisGameobjectIndex = waveSpawner.enemies.IndexOf(gameObject);
             waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
             Destroy(gameObject);

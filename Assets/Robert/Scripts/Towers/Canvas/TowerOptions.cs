@@ -25,7 +25,10 @@ public class TowerOptions : MonoBehaviour
     TowerAi towerStats;
     public void Start()
     {
-        towerLVL.text = "LVL. " + timesUpgraded.ToString();
+        if (towerLVL != null)
+        {
+            towerLVL.text = "LVL. " + timesUpgraded.ToString();
+        }
 
         towerStats = GetComponent<TowerAi>();
 
@@ -59,7 +62,10 @@ public class TowerOptions : MonoBehaviour
             towerStats.damage += damageBoost;
             towerStats.fireSpeed -= fireRateBoost;
             towerStats.radius += radiusBoost;
-            towerLVL.text = "LVL. " + timesUpgraded.ToString();
+            if(towerLVL != null)
+            {
+                towerLVL.text = "LVL. " + timesUpgraded.ToString();
+            }
         }
     }
 }

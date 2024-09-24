@@ -29,6 +29,12 @@ public class BuildMenu : MonoBehaviour
     public int currency;
     public TMP_Text currencyText;
 
+    [Header("Dev tools")]
+    public bool enableDevTools;
+
+    [Header("Dev tools info")]
+    [Header("If M is pressed add 1000 to currency")]
+
     bool buildMenuIsOpen = false;
     bool towerBeingPlaced = false;
 
@@ -55,6 +61,15 @@ public class BuildMenu : MonoBehaviour
         ATowerMenuIsOpen();
 
         Selecting();
+
+        if (enableDevTools)
+        {
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                currency += 1000;
+            }
+        }
+
     }
     #region TowerButtons
     public void TowerOne()
