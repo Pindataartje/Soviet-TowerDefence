@@ -9,6 +9,7 @@ public class TowerAi : MonoBehaviour
     public List<GameObject> targetsInArea = new List<GameObject>();
 
     [Header("Stats")]
+    public int cost;
     public float damage;
     public float fireSpeed;
     public float radius;

@@ -917,7 +917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d202017f9795648bd06ad68e536811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sellvalue: 0
+  sellvalue: 100
   maxAmountOfUpgrades: 3
   damageBoost: 5
   fireRateBoost: 0.1
@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetsInArea: []
+  cost: 100
   damage: 10
   fireSpeed: 0.5
   radius: 10

@@ -47,6 +47,7 @@ public class TowerOptions : MonoBehaviour
     }
     public void DestroyTower()
     {
+        buildmenu.currency += sellvalue;
         buildmenu.towersInMap.Remove(gameObject);
         Destroy(gameObject);
     }

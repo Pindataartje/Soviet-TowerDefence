@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -25,11 +26,15 @@ public class BuildMenu : MonoBehaviour
     [Header("UI")]
     public GameObject buildMenuUI;
 
+    public int currency;
+    public TMP_Text currencyText;
+
     bool buildMenuIsOpen = false;
     bool towerBeingPlaced = false;
 
     private void Update()
     {
+        currencyText.text = currency.ToString();
         if(Input.GetKeyDown(KeyCode.B))
         {
             if (!buildMenuIsOpen)
@@ -39,8 +44,11 @@ public class BuildMenu : MonoBehaviour
             }
             else
             {
-                buildMenuUI.SetActive(false);
-                buildMenuIsOpen = false;
+                if (!towerBeingPlaced)
+                {
+                    buildMenuUI.SetActive(false);
+                    buildMenuIsOpen = false;
+                }
             }
         }
 
@@ -51,31 +59,43 @@ public class BuildMenu : MonoBehaviour
     #region TowerButtons
     public void TowerOne()
     {
-        selectedVignette = Instantiate(towerVignettePrefabs[0]);
+        if(currency >= towers[0].GetComponent<TowerAi>().cost)
+        {
+            selectedVignette = Instantiate(towerVignettePrefabs[0]);
 
-        selectedTowerNumber = 0;
-        towerBeingPlaced = true;
+            selectedTowerNumber = 0;
+            towerBeingPlaced = true;
+        }
     }
     public void TowerTwo()
     {
-        selectedVignette = Instantiate(towerVignettePrefabs[1]);
+        if (currency >= towers[1].GetComponent<TowerAi>().cost)
+        {
+            selectedVignette = Instantiate(towerVignettePrefabs[1]);
 
-        selectedTowerNumber = 1;
-        towerBeingPlaced = true;
+            selectedTowerNumber = 1;
+            towerBeingPlaced = true;
+        }
     }
     public void TowerThree()
     {
-        selectedVignette = Instantiate(towerVignettePrefabs[2]);
+        if (currency >= towers[2].GetComponent<TowerAi>().cost)
+        {
+            selectedVignette = Instantiate(towerVignettePrefabs[2]);
 
-        selectedTowerNumber = 2;
-        towerBeingPlaced = true;
+            selectedTowerNumber = 2;
+            towerBeingPlaced = true;
+        }
     }
     public void TowerFour()
     {
-        selectedVignette = Instantiate(towerVignettePrefabs[3]);
+        if (currency >= towers[3].GetComponent<TowerAi>().cost)
+        {
+            selectedVignette = Instantiate(towerVignettePrefabs[3]);
 
-        selectedTowerNumber = 3;
-        towerBeingPlaced = true;
+            selectedTowerNumber = 3;
+            towerBeingPlaced = true;
+        }
     }
     #endregion
     #region Selecting
@@ -84,12 +104,19 @@ public class BuildMenu : MonoBehaviour
         
         if (towerBeingPlaced)
         {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                towerBeingPlaced = false;
+
+                Destroy(selectedVignette);
+            }
             if(towerIsNotOnPath)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     GameObject placedTower = Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
                     towersInMap.Add(placedTower);
+                    currency -= towers[selectedTowerNumber].GetComponent<TowerAi>().cost;
 
                     towerBeingPlaced = false;
 
@@ -97,13 +124,7 @@ public class BuildMenu : MonoBehaviour
                     buildMenuIsOpen = false;
 
                     Destroy(selectedVignette);
-
-                    Debug.Log("Tower is placed");
                 }
-            }
-            else
-            {
-                Debug.Log("Its not really smart to place here");
             }
         }
     }
