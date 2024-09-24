@@ -13,9 +13,6 @@ public class ResolutionChanger : MonoBehaviour
     public GameObject image2560x1440;
     public GameObject image3840x2160;
 
-    public GameObject fullscreenImage;
-    public GameObject windowedImage;
-
     public AudioMixer audioMixer;
     public Slider musicSlider;
     public Slider sfxSlider;
@@ -43,9 +40,6 @@ public class ResolutionChanger : MonoBehaviour
         InitializeResolution();
         InitializeVolume();
 
-        // Start in fullscreen mode or use saved settings
-        UpdateFullscreenWindowedDisplay();
-
         // Add listeners to sliders to handle volume changes
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
@@ -67,7 +61,6 @@ public class ResolutionChanger : MonoBehaviour
     private void InitializeResolution()
     {
         UpdateResolution();
-        UpdateFullscreenWindowedDisplay();
     }
 
     private void InitializeVolume()
@@ -115,18 +108,6 @@ public class ResolutionChanger : MonoBehaviour
         }
     }
 
-    public void SetFullscreen()
-    {
-        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        UpdateFullscreenWindowedDisplay();
-    }
-
-    public void SetWindowed()
-    {
-        Screen.fullScreenMode = FullScreenMode.Windowed;
-        UpdateFullscreenWindowedDisplay();
-    }
-
     private void UpdateResolution()
     {
         Resolution resolution = resolutions[currentResolutionIndex];
@@ -143,11 +124,14 @@ public class ResolutionChanger : MonoBehaviour
         image3840x2160.SetActive(currentResolutionIndex == 7);
     }
 
-    private void UpdateFullscreenWindowedDisplay()
+    public void SetFullscreen()
     {
-        bool isFullscreen = Screen.fullScreenMode == FullScreenMode.FullScreenWindow;
-        fullscreenImage.SetActive(isFullscreen);
-        windowedImage.SetActive(!isFullscreen);
+        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+    }
+
+    public void SetWindowed()
+    {
+        Screen.fullScreenMode = FullScreenMode.Windowed;
     }
 
     public void SetMusicVolume(float volume)
