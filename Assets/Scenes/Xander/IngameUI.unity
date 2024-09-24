@@ -380,7 +380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.056166667, y: 0.90500003}
   m_AnchorMax: {x: 0.28800002, y: 1}
-  m_AnchoredPosition: {x: -130.76001, y: 0.7000427}
+  m_AnchoredPosition: {x: -130.76001, y: 0.70007324}
   m_SizeDelta: {x: -247, y: -53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58179008
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   image1920x1080: {fileID: 1999960355}
   image2560x1440: {fileID: 726943984}
   image3840x2160: {fileID: 1063905848}
-  fullscreenImage: {fileID: 0}
+  fullscreenImage: {fileID: 1601198800}
   windowedImage: {fileID: 1601198800}
   audioMixer: {fileID: 24100000, guid: 815c9b0c8a2e6624b98b67f2b1853248, type: 2}
   musicSlider: {fileID: 2034542314}
