@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8160eacfd3aeb5f459437e6fe33051a0
+guid: 806c1a0d67d550249980e74eaeb43ba3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MORTARName_0
+      name: UpgradeButtonNormal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,119 +105,14 @@ TextureImporter:
         width: 400
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd3fb9bcd35b9dc4c8dbea59e6fd0d78
-      internalID: -1940525380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORTARName_1
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 25
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9a61a8a30dc83149b84ee218eb77911
-      internalID: -1323310150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORTARName_2
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 26
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d635787808947a943bad82678f71ee28
-      internalID: 1634721270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORTARName_3
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 26
-        width: 33
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 067b6f5cbcf740c439ddd8132f53d78a
-      internalID: -1851185666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORTARName_4
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 26
-        width: 32
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7582ac01302935c43a5b30e9b46e5c58
-      internalID: -155503196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORTARName_5
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 26
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1088b3a1a1768a448b66d50eaf2e22a
-      internalID: -1986907879
+      spriteID: d4bb965676f14744c8575a14a2e84090
+      internalID: -1552522536
       vertices: []
       indices: 
       edges: []
@@ -225,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a3211f517daa06f429e1f3e6bd23155c
+    spriteID: 962ec2decd0e97145846dd06b5492208
     internalID: 0
     vertices: []
     indices: 
@@ -233,12 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MORTARName_0: -1940525380
-      MORTARName_1: -1323310150
-      MORTARName_2: 1634721270
-      MORTARName_3: -1851185666
-      MORTARName_4: -155503196
-      MORTARName_5: -1986907879
+      UpgradeButtonNormal_0: -1552522536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

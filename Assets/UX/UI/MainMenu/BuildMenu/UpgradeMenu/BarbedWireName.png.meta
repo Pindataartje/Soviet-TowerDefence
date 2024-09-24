@@ -95,18 +95,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BarbedWireName_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 400
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c7b115f0dc24e4e8f22b0e4a34d2db
+      internalID: -499735776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 31
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e84ef3ab3b82d4b928f6e762d940d7
+      internalID: -1980983936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 31
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecb68c623539144599fad5bc40af1cf
+      internalID: 1616454711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 31
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8630ca098d4504b884fc649e9997db
+      internalID: -701339936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 31
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78906a7ce9738614c878a150b952982b
+      internalID: 1930153138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 31
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6504e2a98baea4f87d56d9e27204ca
+      internalID: -1523069555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_6
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 31
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c11557c729b5cd45b20ea59d1b6a7ca
+      internalID: -1594699733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_7
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 31
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6057f340074e9f14ca716e7dfa018dae
+      internalID: 1519125421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_8
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 31
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fc34a3171a8a94cb4eb30771e96b26
+      internalID: 1548815212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbedWireName_9
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 31
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269221fb387e5c645a70d2c03ce5948c
+      internalID: 1173944259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7bfb177002f900d4e8607c432ff79c73
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BarbedWireName_0: -499735776
+      BarbedWireName_1: -1980983936
+      BarbedWireName_2: 1616454711
+      BarbedWireName_3: -701339936
+      BarbedWireName_4: 1930153138
+      BarbedWireName_5: -1523069555
+      BarbedWireName_6: -1594699733
+      BarbedWireName_7: 1519125421
+      BarbedWireName_8: 1548815212
+      BarbedWireName_9: 1173944259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
