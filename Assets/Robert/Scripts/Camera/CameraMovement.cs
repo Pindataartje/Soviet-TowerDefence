@@ -42,12 +42,12 @@ public class CameraMovement : MonoBehaviour
 
         if(goBackToSpawn)
         {
-            elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / lerpSpeed);
-            transform.position = Vector3.Lerp(transform.position, cameraSpawn.transform.position, t);
+            elapsedTime += Time.deltaTime / lerpSpeed;
+            transform.position = Vector3.Lerp(transform.position, cameraSpawn.transform.position, elapsedTime);
 
-            if (t >= 1f)
+            if (elapsedTime >= 1f)
             {
+                elapsedTime = 0f;
                 goBackToSpawn = false;
             }
         }
