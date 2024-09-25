@@ -7,10 +7,10 @@ public class CameraMovement : MonoBehaviour
     public GameObject cameraSpawn;
     bool goBackToSpawn;
 
-    float timePassed;
-    public float lerpTime;
-
     public float speed;
+    public float lerpSpeed;
+    public float elapsedTime;
+    public float valueToLerp;
 
     public float distanceGroundToCamera;
 
@@ -23,6 +23,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Start()
     {
+        valueToLerp = 1 / lerpSpeed;
         rb = GetComponent<Rigidbody>();
     }
     void Update()
@@ -41,15 +42,11 @@ public class CameraMovement : MonoBehaviour
 
         if(goBackToSpawn)
         {
-            timePassed += Time.deltaTime;
-            if (timePassed >= lerpTime)
-            {
-                timePassed = lerpTime;
-            }
-            float lerpSpeed = timePassed / lerpTime;
-            transform.position = Vector3.Lerp(transform.position, cameraSpawn.transform.position, lerpSpeed);
-            
-            if(transform.position == cameraSpawn.transform.position)
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / lerpSpeed);
+            transform.position = Vector3.Lerp(transform.position, cameraSpawn.transform.position, t);
+
+            if (t >= 1f)
             {
                 goBackToSpawn = false;
             }
@@ -60,28 +57,29 @@ public class CameraMovement : MonoBehaviour
     {
         if(other.transform.tag == "Border")
         {
+            valueToLerp = 1 / lerpSpeed;
             goBackToSpawn = true;
         }
     }
     public void StayAtSameHeight()
     {
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
-        {
-            if (hit.transform.tag == "Ground")
-            {
-                float soupGetal = distanceGroundToCamera - hit.distance;
-                if (hit.distance < distanceGroundToCamera)
-                {
-                    transform.position += new Vector3(0, soupGetal, 0);
-                }
+        //RaycastHit hit;
+        //if(Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
+        //{
+        //    if (hit.transform.tag == "Ground")
+        //    {
+        //        float soupGetal = distanceGroundToCamera - hit.distance;
+        //        if (hit.distance < distanceGroundToCamera)
+        //        {
+        //            transform.position += new Vector3(0, soupGetal, 0);
+        //        }
 
-                float negatifSoupGetal = hit.distance - distanceGroundToCamera;
-                if(hit.distance > distanceGroundToCamera)
-                {
-                    transform.position -= new Vector3(0, negatifSoupGetal, 0);
-                }
-            }
-        }
+        //        float negatifSoupGetal = hit.distance - distanceGroundToCamera;
+        //        if(hit.distance > distanceGroundToCamera)
+        //        {
+        //            transform.position -= new Vector3(0, negatifSoupGetal, 0);
+        //        }
+        //    }
+        //}
     }
 }
