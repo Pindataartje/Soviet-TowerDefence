@@ -2118,26 +2118,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6717963347100775880, guid: 13bd668c58b653b4ebcfffa16ec9af1a,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7163186346311627963, guid: 13bd668c58b653b4ebcfffa16ec9af1a,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1157563401}
-    - target: {fileID: 7163186346311627963, guid: 13bd668c58b653b4ebcfffa16ec9af1a,
-        type: 3}
-      propertyPath: m_PixelPerfect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163186346311627963, guid: 13bd668c58b653b4ebcfffa16ec9af1a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7274764687710550376, guid: 13bd668c58b653b4ebcfffa16ec9af1a,
         type: 3}
       propertyPath: m_Name
