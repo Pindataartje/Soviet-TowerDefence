@@ -11,6 +11,8 @@ TagManager:
   - BuildManager
   - Ground
   - Tower
+  - NonPlaceable
+  - EnemyPath
   layers:
   - Default
   - TransparentFX

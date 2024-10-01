@@ -117,10 +117,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2852031590423785751}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da1ec85dbaf633e4e8443386d1229419,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: -3421939852092755872}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
@@ -165,22 +161,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetsInArea: []
+  particleParent: {fileID: 0}
+  bullet: {fileID: 0}
   cost: 400
   damage: 30
   fireSpeed: 1
   radius: 40
---- !u!114 &2852031590423785751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765468455594958159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91af841fb55f99408a3d840a6d54170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isBarbedWire: 0
+  speedDecrease: 0
 --- !u!64 &-3421939852092755872
 MeshCollider:
   m_ObjectHideFlags: 0

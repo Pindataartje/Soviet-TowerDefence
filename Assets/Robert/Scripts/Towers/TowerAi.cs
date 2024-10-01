@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TowerAi : MonoBehaviour
 {
     SphereCollider detectArea;
     public List<GameObject> targetsInArea = new List<GameObject>();
+    public GameObject particleParent;
+    public ParticleSystem bullet;
 
     [Header("Stats")]
     public int cost;
     public float damage;
     public float fireSpeed;
     public float radius;
+    [Space]
+    public bool isBarbedWire;
+    public float speedDecrease;
+
 
     bool isShooting;
     
@@ -29,9 +36,12 @@ public class TowerAi : MonoBehaviour
             {
                 targetsInArea.RemoveAt(0);
             }
-            if(!isShooting)
+            if(!isBarbedWire)
             {
-                StartCoroutine(FireRate(fireSpeed));
+                if (!isShooting)
+                {
+                    StartCoroutine(FireRate(fireSpeed));
+                }
             }
         }
     }
@@ -45,12 +55,25 @@ public class TowerAi : MonoBehaviour
             Debug.Log("Target found");
             targetsInArea.Add(other.gameObject);
         }
+        if (isBarbedWire)
+        {
+            foreach (GameObject target in targetsInArea)
+            {
+                NavMeshAgent enemy = target.GetComponent<NavMeshAgent>();
+                enemy.speed -= speedDecrease;
+            }
+        }
     }
     public void OnTriggerExit(Collider other)
     {
         if (other.tag == "Enemy")
         {
             targetsInArea.Remove(other.gameObject);
+        }
+        if (isBarbedWire)
+        {
+            NavMeshAgent enemy = other.GetComponent<NavMeshAgent>();
+            enemy.speed += speedDecrease;
         }
     }
     #endregion
@@ -59,6 +82,7 @@ public class TowerAi : MonoBehaviour
     {
         isShooting = true;
 
+        BulletParticle();
         EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
         enemy.EnemyTakeDamage(damage);
         if (enemy.enemyHealth <= 0)
@@ -79,4 +103,9 @@ public class TowerAi : MonoBehaviour
         detectArea.radius = radius;
     }
     #endregion
+    public void BulletParticle()
+    {
+        particleParent.transform.LookAt(targetsInArea[0].transform.position);
+        bullet.Play();
+    }
 }
