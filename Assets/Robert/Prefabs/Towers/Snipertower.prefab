@@ -146,6 +146,7 @@ MonoBehaviour:
   damageBoost: 15
   fireRateBoost: 0.1
   radiusBoost: 5
+  radiusOffCenterFix: 0
   towerLVL: {fileID: 0}
   towerOptionsIsOpen: 0
 --- !u!114 &1772893673119347572
