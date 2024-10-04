@@ -31,8 +31,8 @@ public class WaveSpawner : MonoBehaviour
     #region UI
     [Header("UI")]
     [Header("Countdown")]
-    public GameObject waveCountdownUI; 
-    public TMP_Text waveCountdownText; 
+    //public GameObject waveCountdownUI; 
+    //public TMP_Text waveCountdownText; 
     float waveCountdown;
 
     [Header("Enemy Counter")]
@@ -57,7 +57,7 @@ public class WaveSpawner : MonoBehaviour
             }
             if (waveCountdown > 0)
             {
-                waveCountdownText.text = waveCountdown.ToString("N0");
+                //waveCountdownText.text = waveCountdown.ToString("N0");
 
                 waveCountdown -= Time.deltaTime;
             }
@@ -67,11 +67,11 @@ public class WaveSpawner : MonoBehaviour
     {
         if (currentWave <= amountOfWaves)
         {
-            waveCountdownUI.SetActive(true);
+            //waveCountdownUI.SetActive(true);
             spawningWave = true;
             yield return new WaitForSeconds(timeBetweenWaves);
 
-            waveCountdownUI.SetActive(false);
+            //waveCountdownUI.SetActive(false);
             currentWaveText.text = currentWave.ToString();
 
             for (int i = 0; i < enemiesToSpawn / enemyPrefabs.Length; i++)

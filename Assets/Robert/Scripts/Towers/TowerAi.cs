@@ -12,10 +12,10 @@ public class TowerAi : MonoBehaviour
     [Header("Particles")]
     public GameObject particleParent;
     public ParticleSystem bullet;
-    public GameObject radiusVisualCenter;
-    public ParticleSystem radiusVisual;
+    public GameObject radiusVisual;
 
     [Header("Stats")]
+    public string towerName;
     public int cost;
     public float damage;
     public float fireSpeed;
@@ -106,8 +106,8 @@ public class TowerAi : MonoBehaviour
         detectArea = GetComponent<SphereCollider>();
         detectArea.radius = radius;
 
-        radiusVisual.startSize = radius * 2;
-        radiusVisualCenter.transform.position = new Vector3(detectArea.center.x, detectArea.center.y, detectArea.center.z);
+        radiusVisual.transform.localScale = new Vector3(radius * 2, radius * 2, radius * 2);
+        radiusVisual.transform.position = new Vector3(detectArea.center.x, detectArea.center.y, detectArea.center.z);
     }
     #endregion
     public void BulletParticle()
@@ -118,6 +118,6 @@ public class TowerAi : MonoBehaviour
     public void RadiusUpgradeUpdateCenter(float radius)
     {
         detectArea.center = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
-        radiusVisualCenter.transform.position = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
+        radiusVisual.transform.position = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
     }
 }

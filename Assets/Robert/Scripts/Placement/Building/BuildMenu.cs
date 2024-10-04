@@ -16,9 +16,6 @@ public class BuildMenu : MonoBehaviour
     [Header("Tower Prefabs")]
     public GameObject[] towers;
 
-    [Header("Tower Info")]
-    public Data[] stats;
-
     [Header("Towers Placed (Only in runtime)")]
     public List<GameObject> towersInMap = new List<GameObject>();
     public bool towerIsNotOnPath = true;
@@ -35,10 +32,9 @@ public class BuildMenu : MonoBehaviour
     [Header("Dev tools")]
     public bool enableDevTools;
 
-    [Header("Dev tools info")]
-    [Header("If M is pressed add 1000 to currency")]
-
-    bool buildMenuIsOpen = false;
+    [Header("Runtime Only")]
+    public bool upgradeMenuIsOpen = false;
+    public bool buildMenuIsOpen = false;
     bool towerBeingPlaced = false;
 
     private void Update()
@@ -46,7 +42,7 @@ public class BuildMenu : MonoBehaviour
         currencyText.text = currency.ToString();
         if(Input.GetKeyDown(KeyCode.B))
         {
-            if (!buildMenuIsOpen)
+            if (!buildMenuIsOpen && !upgradeMenuIsOpen)
             {
                 buildMenuUI.SetActive(true);
                 buildMenuIsOpen = true;
@@ -157,20 +153,19 @@ public class BuildMenu : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    foreach (GameObject tower in towersInMap)
+                    if(!buildMenuIsOpen)
                     {
-                        tower.GetComponent<TowerOptions>().TowerDeselect();
-                        if (!tower.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                        foreach (GameObject tower in towersInMap)
                         {
-                            hit.transform.GetComponent<TowerOptions>().TowerSelect();
+                            tower.GetComponent<TowerOptions>().TowerDeselect();
+                            if (!tower.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                            {
+                                hit.transform.GetComponent<TowerOptions>().TowerSelect();
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    void GetTowerInfo()
-    {
-        
     }
 }

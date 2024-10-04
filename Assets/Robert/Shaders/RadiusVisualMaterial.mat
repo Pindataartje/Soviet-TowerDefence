@@ -13,9 +13,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
-  - _ALPHATEST_ON
   - _DOUBLESIDED_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,6 +55,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 0
     - _CullModeForward: 0
+    - _DegreesWithShader: 1.2
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
@@ -93,7 +94,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _IntersectionColor: {r: 0.02171578, g: 0.02509251, b: 0.76729554, a: 1}
+    - _IntersectionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8969499361189996321

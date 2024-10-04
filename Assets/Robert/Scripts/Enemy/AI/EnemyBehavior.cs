@@ -28,9 +28,9 @@ public class EnemyBehavior : MonoBehaviour
 
     void Start()
     {
-        hpBar.maxValue = enemyHealth;
-        hpBar.value = enemyHealth;
-        currentHealth = enemyHealth;
+        //hpBar.maxValue = enemyHealth;
+        //hpBar.value = enemyHealth;
+        //currentHealth = enemyHealth;
         buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
         buildmenu = buildmanager.GetComponent<BuildMenu>();
 
