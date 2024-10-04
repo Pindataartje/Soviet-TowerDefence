@@ -13,6 +13,7 @@ public class TowerOptions : MonoBehaviour
     public float damageBoost;
     public float fireRateBoost;
     public float radiusBoost;
+    public float radiusOffCenterFix;
 
     [Header("UI")]
     public TMP_Text towerLVL;
@@ -61,7 +62,10 @@ public class TowerOptions : MonoBehaviour
             timesUpgraded++;
             towerStats.damage += damageBoost;
             towerStats.fireSpeed -= fireRateBoost;
+
             towerStats.radius += radiusBoost;
+            towerStats.RadiusUpgradeUpdateCenter(radiusOffCenterFix);
+
             if(towerLVL != null)
             {
                 towerLVL.text = "LVL. " + timesUpgraded.ToString();

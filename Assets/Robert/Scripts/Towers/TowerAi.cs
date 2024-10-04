@@ -8,8 +8,12 @@ public class TowerAi : MonoBehaviour
 {
     SphereCollider detectArea;
     public List<GameObject> targetsInArea = new List<GameObject>();
+
+    [Header("Particles")]
     public GameObject particleParent;
     public ParticleSystem bullet;
+    public GameObject radiusVisualCenter;
+    public ParticleSystem radiusVisual;
 
     [Header("Stats")]
     public int cost;
@@ -101,11 +105,19 @@ public class TowerAi : MonoBehaviour
     {
         detectArea = GetComponent<SphereCollider>();
         detectArea.radius = radius;
+
+        radiusVisual.startSize = radius * 2;
+        radiusVisualCenter.transform.position = new Vector3(detectArea.center.x, detectArea.center.y, detectArea.center.z);
     }
     #endregion
     public void BulletParticle()
     {
         particleParent.transform.LookAt(targetsInArea[0].transform.position);
         bullet.Play();
+    }
+    public void RadiusUpgradeUpdateCenter(float radius)
+    {
+        detectArea.center = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
+        radiusVisualCenter.transform.position = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
     }
 }

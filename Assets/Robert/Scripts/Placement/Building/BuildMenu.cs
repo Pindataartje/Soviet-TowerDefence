@@ -16,6 +16,9 @@ public class BuildMenu : MonoBehaviour
     [Header("Tower Prefabs")]
     public GameObject[] towers;
 
+    [Header("Tower Info")]
+    public Data[] stats;
+
     [Header("Towers Placed (Only in runtime)")]
     public List<GameObject> towersInMap = new List<GameObject>();
     public bool towerIsNotOnPath = true;
@@ -165,5 +168,9 @@ public class BuildMenu : MonoBehaviour
                 }
             }
         }
+    }
+    void GetTowerInfo()
+    {
+        
     }
 }
