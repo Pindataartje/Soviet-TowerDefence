@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class TowerAi : MonoBehaviour
 {
-    SphereCollider detectArea;
+    CapsuleCollider detectArea;
     public List<GameObject> targetsInArea = new List<GameObject>();
 
     [Header("Particles")]
@@ -24,16 +24,20 @@ public class TowerAi : MonoBehaviour
     public bool isBarbedWire;
     public float speedDecrease;
 
-
+    [Header("Runtime Only")]
+    public bool activeTower;
     bool isShooting;
     
     void Start()
     {
         SetRadius();
+        StartCoroutine(WaitForActivating(2));
     }
     #region Update
     private void Update()
     {
+        if (!activeTower) return;
+
         if(targetsInArea.Count > 0)
         {
             if (targetsInArea[0] == null)
@@ -103,11 +107,12 @@ public class TowerAi : MonoBehaviour
     #region SetRadius
     public void SetRadius()
     {
-        detectArea = GetComponent<SphereCollider>();
+        detectArea = GetComponent<CapsuleCollider>();
         detectArea.radius = radius;
 
-        radiusVisual.transform.localScale = new Vector3(radius * 2, radius * 2, radius * 2);
-        radiusVisual.transform.position = new Vector3(detectArea.center.x, detectArea.center.y, detectArea.center.z);
+        //float detectAreaValue = detectArea.radius * 2;
+        //radiusVisual.transform.localScale = new Vector3(detectAreaValue, detectAreaValue, detectAreaValue);
+        //radiusVisual.transform.position = detectArea.center;
     }
     #endregion
     public void BulletParticle()
@@ -115,9 +120,9 @@ public class TowerAi : MonoBehaviour
         particleParent.transform.LookAt(targetsInArea[0].transform.position);
         bullet.Play();
     }
-    public void RadiusUpgradeUpdateCenter(float radius)
+    public IEnumerator WaitForActivating(float waitTime)
     {
-        detectArea.center = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
-        radiusVisual.transform.position = new Vector3(detectArea.center.x + radius, detectArea.center.y, detectArea.center.z);
+        yield return new WaitForSeconds(waitTime);
+        activeTower = true;
     }
 }

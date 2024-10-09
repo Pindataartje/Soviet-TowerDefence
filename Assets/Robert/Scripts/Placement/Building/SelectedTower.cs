@@ -12,10 +12,6 @@ public class SelectedTower : MonoBehaviour
     BuildMenu buildMenu;
     GameObject buildManager;
 
-    [Header("Radius Visual")]
-    public GameObject radiusVisualCenter;
-    public ParticleSystem radiusVisual;
-
     private void Start()
     {
         buildManager = GameObject.FindGameObjectWithTag("BuildManager");
@@ -53,10 +49,5 @@ public class SelectedTower : MonoBehaviour
             Debug.Log("Rotating right");
             transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
-    }
-    public void SetRadiusVisual()
-    {
-        //radiusVisual.startSize = radius * 2;
-        //radiusVisualCenter.transform.position = new Vector3(detectArea.center.x, detectArea.center.y, detectArea.center.z);
     }
 }

@@ -13,7 +13,8 @@ TagManager:
   - Tower
   - NonPlaceable
   - EnemyPath
-  - UpgradeMenu
+  - BuildUI
+  - UpgradeUI
   layers:
   - Default
   - TransparentFX
