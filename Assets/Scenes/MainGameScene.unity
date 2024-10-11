@@ -7542,6 +7542,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1008685783}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1019811868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 247.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 525.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5308438
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.84746975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 115.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934448122091556051, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianFarm (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1753e78622f119541a6f80a471574e09, type: 3}
 --- !u!1001 &1025821967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7870,6 +7938,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069092663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1071939396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 236.79456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.181282
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 609.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92536974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3790658
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 44.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934448122091556051, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianFarm (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1753e78622f119541a6f80a471574e09, type: 3}
 --- !u!1001 &1076027808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15133,6 +15269,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &2979237076716430059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 376.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 589.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96939266
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.24551585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -28.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266455967105554025, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934448122091556051, guid: 1753e78622f119541a6f80a471574e09,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianFarm
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1753e78622f119541a6f80a471574e09, type: 3}
 --- !u!1 &3019689085166880278
 GameObject:
   m_ObjectHideFlags: 0
@@ -16574,3 +16778,6 @@ SceneRoots:
   - {fileID: 1149270396}
   - {fileID: 418944897}
   - {fileID: 393433993}
+  - {fileID: 2979237076716430059}
+  - {fileID: 1019811868}
+  - {fileID: 1071939396}
