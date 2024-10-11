@@ -35,6 +35,7 @@ public class BuildMenu : MonoBehaviour
 
     [Header("Dev tools")]
     public bool enableDevTools;
+    public bool isTestScene;
 
     [Header("Runtime Only")]
     public bool upgradeMenuIsOpen = false;
@@ -46,8 +47,11 @@ public class BuildMenu : MonoBehaviour
 
     private void Start()
     {
-        buildUIObject = GameObject.FindGameObjectWithTag("BuildUI");
-        buildUIAnim = buildUIObject.GetComponent<Animator>();
+        if(!isTestScene)
+        {
+            buildUIObject = GameObject.FindGameObjectWithTag("BuildUI");
+            buildUIAnim = buildUIObject.GetComponent<Animator>();
+        }
         
         foreach(GameObject tower in towers)
         {
@@ -61,14 +65,22 @@ public class BuildMenu : MonoBehaviour
         {
             if (!buildMenuIsOpen && !upgradeMenuIsOpen)
             {
-                buildUIAnim.SetInteger("BuildUIState", 1);
+                if (!isTestScene)
+                    buildUIAnim.SetInteger("BuildUIState", 1);
+                else
+                    buildMenuUI.SetActive(true);
+                
                 buildMenuIsOpen = true;
             }
             else
             {
                 if (!towerBeingPlaced)
                 {
-                    buildUIAnim.SetInteger("BuildUIState", 2);
+                    if (!isTestScene)
+                        buildUIAnim.SetInteger("BuildUIState", 2);
+                    else
+                        buildMenuUI.SetActive(false);
+
                     buildMenuIsOpen = false;
                 }
             }
@@ -136,14 +148,22 @@ public class BuildMenu : MonoBehaviour
         
         if (towerBeingPlaced)
         {
-            buildUIAnim.SetInteger("BuildUIState", 2);
+            if (!isTestScene)
+                buildUIAnim.SetInteger("BuildUIState", 2);
+            else
+                buildMenuUI.SetActive(false);
+
             buildMenuIsOpen = false;
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 towerBeingPlaced = false;
 
-                buildUIAnim.SetInteger("BuildUIState", 1);
+                if (!isTestScene)
+                    buildUIAnim.SetInteger("BuildUIState", 1);
+                else
+                    buildMenuUI.SetActive(true);
+
                 buildMenuIsOpen = true;
 
                 Destroy(selectedVignette);

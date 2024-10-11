@@ -41,11 +41,14 @@ public class TowerOptions : MonoBehaviour
         buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
         buildmenu = buildmanager.GetComponent<BuildMenu>();
 
-        upgradeMenuUI = GameObject.FindGameObjectWithTag("UpgradeUI");
-        towerOptionsData = upgradeMenuUI.GetComponent<TowerOptionsData>();
+        if(!buildmenu.isTestScene)
+        {
+            upgradeMenuUI = GameObject.FindGameObjectWithTag("UpgradeUI");
+            towerOptionsData = upgradeMenuUI.GetComponent<TowerOptionsData>();
 
-        buildMenuUI = GameObject.FindGameObjectWithTag("BuildUI");
-        menuUIAnim = buildMenuUI.GetComponent<Animator>();
+            buildMenuUI = GameObject.FindGameObjectWithTag("BuildUI");
+            menuUIAnim = buildMenuUI.GetComponent<Animator>();
+        }
 
         if (towerLVL != null)
         {
