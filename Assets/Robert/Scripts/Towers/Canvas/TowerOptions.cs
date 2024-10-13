@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class TowerOptions : MonoBehaviour
 {
+    [Header("Objects")]
+    public GameObject radiusVisual;
+
     [Header("Stats change and cost")]
+    public int upgradeCost;
+    public int costBoostPerUpgrade;
+    [Space]
     public int sellvalue;
     [Space]
     public int maxAmountOfUpgrades;
@@ -21,32 +27,76 @@ public class TowerOptions : MonoBehaviour
     public bool towerOptionsIsOpen;
 
     GameObject buildmanager;
+    GameObject buildMenuUI;
+    GameObject upgradeMenuUI;
+    Animator menuUIAnim;
+    TowerOptionsData towerOptionsData;
     BuildMenu buildmenu;
-    TowerAi towerStats;
+    public TowerAi towerStats;
+    public bool upgradeMenuHasBeenOpened;
     public void Start()
     {
+        //towerStats = GetComponent<TowerAi>();
+
+        buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
+        buildmenu = buildmanager.GetComponent<BuildMenu>();
+
+        if(!buildmenu.isTestScene)
+        {
+            upgradeMenuUI = GameObject.FindGameObjectWithTag("UpgradeUI");
+            towerOptionsData = upgradeMenuUI.GetComponent<TowerOptionsData>();
+
+            buildMenuUI = GameObject.FindGameObjectWithTag("BuildUI");
+            menuUIAnim = buildMenuUI.GetComponent<Animator>();
+        }
+
         if (towerLVL != null)
         {
             towerLVL.text = "LVL. " + timesUpgraded.ToString();
         }
-
-        towerStats = GetComponent<TowerAi>();
-
-        buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
-        buildmenu = buildmanager.GetComponent<BuildMenu>();
     }
     public void TowerSelect()
     {
-        towerOptionsIsOpen = true;
-        GameObject onSelectedTowerCanvas = transform.GetChild(0).gameObject;
-        onSelectedTowerCanvas.SetActive(true);
-        
+        if(towerStats != null)
+        {
+            if (towerStats.activeTower)
+            {
+                Debug.Log("upgrade menu opening");
+                towerOptionsIsOpen = true;
+                menuUIAnim.SetInteger("UpgradeUIState", 1);
+
+                radiusVisual.SetActive(true);
+
+                SetUpgradeMenuData();
+
+                buildmenu.upgradeMenuIsOpen = true;
+
+                upgradeMenuHasBeenOpened = true;
+            }
+        }
     }
     public void TowerDeselect()
     {
-        towerOptionsIsOpen = false;
-        GameObject onSelectedTowerCanvas = transform.GetChild(0).gameObject;
-        onSelectedTowerCanvas.SetActive(false);
+        Debug.Log("function activated");
+        //if (towerStats == null)
+        //{
+        //    Debug.Log("null check");
+        //    return;
+        //}
+        if (upgradeMenuHasBeenOpened == true)
+        {
+            Debug.Log("upgrade menu closing");
+
+            if (towerOptionsIsOpen == true)
+            {
+                towerOptionsIsOpen = false;
+                menuUIAnim.SetInteger("UpgradeUIState", 2);
+
+                radiusVisual.SetActive(false);
+
+                buildmenu.upgradeMenuIsOpen = false;
+            }
+        }
     }
     public void DestroyTower()
     {
@@ -56,16 +106,46 @@ public class TowerOptions : MonoBehaviour
     }
     public void UpgradeTower()
     {
-        if(maxAmountOfUpgrades > timesUpgraded)
+        if(buildmenu.currency >= upgradeCost)
         {
-            timesUpgraded++;
-            towerStats.damage += damageBoost;
-            towerStats.fireSpeed -= fireRateBoost;
-            towerStats.radius += radiusBoost;
-            if(towerLVL != null)
+            Debug.Log("you have enough money to upgrade");
+            if (maxAmountOfUpgrades > timesUpgraded)
             {
-                towerLVL.text = "LVL. " + timesUpgraded.ToString();
+                timesUpgraded++;
+                towerStats.damage += damageBoost;
+                towerStats.fireSpeed -= fireRateBoost;
+
+                towerStats.radius += radiusBoost;
+                radiusVisual.transform.localScale += new Vector3(radiusBoost * 2, radiusBoost * 2, radiusBoost * 2);
+
+                sellvalue += upgradeCost;
+                upgradeCost += costBoostPerUpgrade;
+
+                buildmenu.currency -= upgradeCost;
+
+                SetUpgradeMenuData();
+                if (towerLVL != null)
+                {
+                    towerLVL.text = "LVL. " + timesUpgraded.ToString();
+                }
             }
         }
+    }
+    public void SetUpgradeMenuData()
+    {
+        towerOptionsData.towerName = towerStats.towerName;
+        towerOptionsData.towerUpgradeCost = upgradeCost;
+        towerOptionsData.towerSellValue = sellvalue;
+        towerOptionsData.towerOptions = GetComponent<TowerOptions>();
+
+        towerOptionsData.SetUI();
+    }
+    public void GetUpgradeData()
+    {
+        UpgradeTower();
+    }
+    public void GetSellData()
+    {
+        DestroyTower();
     }
 }

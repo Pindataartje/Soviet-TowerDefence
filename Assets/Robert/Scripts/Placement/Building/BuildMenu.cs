@@ -16,9 +16,13 @@ public class BuildMenu : MonoBehaviour
     [Header("Tower Prefabs")]
     public GameObject[] towers;
 
+    public List<GameObject> towerBehavior = new List<GameObject>();
+    public List<GameObject> inMapTowerBehavior = new List<GameObject>();
+
     [Header("Towers Placed (Only in runtime)")]
     public List<GameObject> towersInMap = new List<GameObject>();
     public bool towerIsNotOnPath = true;
+    public float waitTimeToBuildAgain;
 
     GameObject onSelectedTowerCanvas;
     int selectedTowerNumber;
@@ -31,34 +35,56 @@ public class BuildMenu : MonoBehaviour
 
     [Header("Dev tools")]
     public bool enableDevTools;
+    public bool isTestScene;
 
-    [Header("Dev tools info")]
-    [Header("If M is pressed add 1000 to currency")]
+    [Header("Runtime Only")]
+    public bool upgradeMenuIsOpen = false;
+    public bool buildMenuIsOpen = false;
+    public bool towerBeingPlaced = false;
+    public bool canBuildAgain = true;
+    Animator buildUIAnim;
+    GameObject buildUIObject;
 
-    bool buildMenuIsOpen = false;
-    bool towerBeingPlaced = false;
-
+    private void Start()
+    {
+        if(!isTestScene)
+        {
+            buildUIObject = GameObject.FindGameObjectWithTag("BuildUI");
+            buildUIAnim = buildUIObject.GetComponent<Animator>();
+        }
+        
+        foreach(GameObject tower in towers)
+        {
+            towerBehavior.Add(tower.transform.GetChild(0).gameObject);
+        }
+    }
     private void Update()
     {
         currencyText.text = currency.ToString();
         if(Input.GetKeyDown(KeyCode.B))
         {
-            if (!buildMenuIsOpen)
+            if (!buildMenuIsOpen && !upgradeMenuIsOpen)
             {
-                buildMenuUI.SetActive(true);
+                if (!isTestScene)
+                    buildUIAnim.SetInteger("BuildUIState", 1);
+                else
+                    buildMenuUI.SetActive(true);
+                
                 buildMenuIsOpen = true;
             }
             else
             {
                 if (!towerBeingPlaced)
                 {
-                    buildMenuUI.SetActive(false);
+                    if (!isTestScene)
+                        buildUIAnim.SetInteger("BuildUIState", 2);
+                    else
+                        buildMenuUI.SetActive(false);
+
                     buildMenuIsOpen = false;
                 }
             }
         }
-
-        ATowerMenuIsOpen();
 
         Selecting();
 
@@ -69,12 +95,15 @@ public class BuildMenu : MonoBehaviour
                 currency += 1000;
             }
         }
-
+        if(!buildMenuIsOpen && canBuildAgain)
+        {
+            ATowerMenuIsOpen();
+        }
     }
     #region TowerButtons
     public void TowerOne()
     {
-        if(currency >= towers[0].GetComponent<TowerAi>().cost)
+        if(currency >= towerBehavior[0].GetComponent<TowerAi>().cost)
         {
             selectedVignette = Instantiate(towerVignettePrefabs[0]);
 
@@ -84,7 +113,7 @@ public class BuildMenu : MonoBehaviour
     }
     public void TowerTwo()
     {
-        if (currency >= towers[1].GetComponent<TowerAi>().cost)
+        if (currency >= towerBehavior[1].GetComponent<TowerAi>().cost)
         {
             selectedVignette = Instantiate(towerVignettePrefabs[1]);
 
@@ -94,7 +123,7 @@ public class BuildMenu : MonoBehaviour
     }
     public void TowerThree()
     {
-        if (currency >= towers[2].GetComponent<TowerAi>().cost)
+        if (currency >= towerBehavior[2].GetComponent<TowerAi>().cost)
         {
             selectedVignette = Instantiate(towerVignettePrefabs[2]);
 
@@ -104,7 +133,7 @@ public class BuildMenu : MonoBehaviour
     }
     public void TowerFour()
     {
-        if (currency >= towers[3].GetComponent<TowerAi>().cost)
+        if (currency >= towerBehavior[3].GetComponent<TowerAi>().cost)
         {
             selectedVignette = Instantiate(towerVignettePrefabs[3]);
 
@@ -119,9 +148,23 @@ public class BuildMenu : MonoBehaviour
         
         if (towerBeingPlaced)
         {
+            if (!isTestScene)
+                buildUIAnim.SetInteger("BuildUIState", 2);
+            else
+                buildMenuUI.SetActive(false);
+
+            buildMenuIsOpen = false;
+
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 towerBeingPlaced = false;
+
+                if (!isTestScene)
+                    buildUIAnim.SetInteger("BuildUIState", 1);
+                else
+                    buildMenuUI.SetActive(true);
+
+                buildMenuIsOpen = true;
 
                 Destroy(selectedVignette);
             }
@@ -129,14 +172,14 @@ public class BuildMenu : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
+                    StartCoroutine(WaitToBuildAgain(waitTimeToBuildAgain));
+                    canBuildAgain = false;
+
                     GameObject placedTower = Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
                     towersInMap.Add(placedTower);
-                    currency -= towers[selectedTowerNumber].GetComponent<TowerAi>().cost;
+                    currency -= towerBehavior[selectedTowerNumber].GetComponent<TowerAi>().cost;
 
                     towerBeingPlaced = false;
-
-                    buildMenuUI.SetActive(false);
-                    buildMenuIsOpen = false;
 
                     Destroy(selectedVignette);
                 }
@@ -152,18 +195,49 @@ public class BuildMenu : MonoBehaviour
         {
             if (hit.transform.tag == "Tower")
             {
+                if(hit.collider is MeshCollider)
+                {
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        if (!buildMenuIsOpen)
+                        {
+                            foreach (GameObject tower in towersInMap)
+                            {
+                                inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
+
+                                foreach (GameObject behavior in inMapTowerBehavior)
+                                {
+                                    behavior.GetComponent<TowerOptions>().TowerDeselect();
+                                    if (!tower.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                                    {
+                                        hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    foreach (GameObject tower in towersInMap)
+                    foreach(GameObject tower in towersInMap)
                     {
-                        tower.GetComponent<TowerOptions>().TowerDeselect();
-                        if (!tower.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                        inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
+
+                        foreach(GameObject behavior in inMapTowerBehavior)
                         {
-                            hit.transform.GetComponent<TowerOptions>().TowerSelect();
+                            behavior.GetComponent<TowerOptions>().TowerDeselect();
                         }
                     }
                 }
             }
         }
+    }
+    public IEnumerator WaitToBuildAgain(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        canBuildAgain = true;
     }
 }

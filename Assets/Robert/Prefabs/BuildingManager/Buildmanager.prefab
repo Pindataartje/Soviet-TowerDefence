@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10197349574805581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.8196287, y: 31.602182, z: -31.080164}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -341.92697, y: -6.80612, z: -442.00098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,19 +44,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3598b65afcd14e935ff8b8b65d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   towerVignettePrefabs:
   - {fileID: 2876643005864001147, guid: 38fc765af5e80324ebd189ba4eb38d08, type: 3}
-  - {fileID: 3768108764957789551, guid: 51be8804af58318418777370b90a56e1, type: 3}
+  - {fileID: 2087048912402179419, guid: 87316aad89435264388d524b81294b6b, type: 3}
+  - {fileID: 3200500742409514567, guid: a5b518908fb8e3e4facd2a8678f1d8bc, type: 3}
+  - {fileID: 4030155868946102685, guid: 039e8255c102106448b3a2d2f60216b6, type: 3}
   selectedVignette: {fileID: 0}
   towers:
   - {fileID: 2876643005864001147, guid: c9c4e358c5342e141887be69c6e18f09, type: 3}
-  - {fileID: 3768108764957789551, guid: b97dd2cfaeb2e674c8ed66ffd534314e, type: 3}
+  - {fileID: 5765468455594958159, guid: 78cece8a98930814ab0b36382e72fb89, type: 3}
+  - {fileID: 5759835292163218664, guid: c5d23bcb354617b42b7d5d7bf15051e9, type: 3}
+  - {fileID: 53505479447355893, guid: e1fdf6471e32c6c42a7a2a15f08a8ab3, type: 3}
+  towerBehavior: []
+  inMapTowerBehavior: []
   towersInMap: []
-  selectedTowerNumber: 0
-  buildMenuUI: {fileID: 0}
   towerIsNotOnPath: 1
+  waitTimeToBuildAgain: 0.5
+  buildMenuUI: {fileID: 0}
+  currency: 10000
+  currencyText: {fileID: 0}
+  enableDevTools: 1
+  upgradeMenuIsOpen: 0
+  buildMenuIsOpen: 0
+  towerBeingPlaced: 0
+  canBuildAgain: 1

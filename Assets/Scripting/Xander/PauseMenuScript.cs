@@ -11,10 +11,6 @@ public class PauseMenuScript : MonoBehaviour
     void Start()
     {
         pauseMenuCanvas.SetActive(false);
-        foreach (GameObject uiElement in pauseMenuUIElements)
-        {
-            uiElement.SetActive(true);
-        }
     }
 
     void Update()
