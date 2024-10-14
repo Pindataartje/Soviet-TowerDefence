@@ -14,6 +14,13 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LoadSceneWithFakeProgress(sceneIndex)); // Start loading the scene with fake progress
     }
 
+    public void LoadSceneNormally(int sceneIndex)
+    {
+        Time.timeScale = 1f; // Reset the time scale to normal in case the game is paused
+        StartCoroutine(LoadSceneWithRealProgress(sceneIndex)); // Start loading the scene with real progress
+    }
+
+    // Fake loading with random progress and smooth movements
     private IEnumerator LoadSceneWithFakeProgress(int sceneIndex)
     {
         loadingScreen.SetActive(true);  // Activate the loading screen
@@ -58,6 +65,30 @@ public class MainMenu : MonoBehaviour
             {
                 loadingSlider.value = 1f; // Ensure slider reaches full
                 asyncLoad.allowSceneActivation = true; // Activate the scene
+            }
+
+            yield return null;
+        }
+    }
+
+    // Normal loading without fake progress
+    private IEnumerator LoadSceneWithRealProgress(int sceneIndex)
+    {
+        loadingScreen.SetActive(true);  // Activate the loading screen
+
+        yield return new WaitForSeconds(0.1f); // Small delay to avoid glitches
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (!asyncLoad.isDone)
+        {
+            // Update the slider with the real progress (asyncLoad.progress goes from 0 to 0.9)
+            loadingSlider.value = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+
+            // Ensure slider reaches 1 when fully loaded
+            if (asyncLoad.progress >= 0.9f)
+            {
+                loadingSlider.value = 1f;
             }
 
             yield return null;
