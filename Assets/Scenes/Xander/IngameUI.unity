@@ -753,7 +753,7 @@ MonoBehaviour:
   mainMenuSceneName: MainMenu
   pauseMenuUIElements:
   - {fileID: 4933426954353699573}
-  - {fileID: 0}
+  - {fileID: 1462240033}
 --- !u!82 &1157563406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -885,6 +885,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 133255214}
   loadingSlider: {fileID: 678030669}
+--- !u!1 &1462240033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5045057315080826258, guid: c9cbb23e5fc235a478b3f20ebb1feb11,
+    type: 3}
+  m_PrefabInstance: {fileID: 3331975931053484771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796771578
 GameObject:
   m_ObjectHideFlags: 0
