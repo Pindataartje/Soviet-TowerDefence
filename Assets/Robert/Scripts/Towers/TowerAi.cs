@@ -23,6 +23,12 @@ public class TowerAi : MonoBehaviour
     [Space]
     public bool isBarbedWire;
     public float speedDecrease;
+    [Space]
+    public bool isMortar;
+    public float mortarBulletAirTime;
+    public ParticleSystem mortarBarrelParticle;
+    public GameObject mortarBullet;
+    bool mortarShooting;
 
     [Header("Runtime Only")]
     public bool activeTower;
@@ -44,12 +50,13 @@ public class TowerAi : MonoBehaviour
             {
                 targetsInArea.RemoveAt(0);
             }
-            if(!isBarbedWire)
+            if(!isBarbedWire && !isMortar && !isShooting)
             {
-                if (!isShooting)
-                {
-                    StartCoroutine(FireRate(fireSpeed));
-                }
+                StartCoroutine(FireRate(fireSpeed));
+            }
+            if (isMortar && !mortarShooting)
+            {
+                StartCoroutine(MortarBehavior(mortarBulletAirTime, fireSpeed));
             }
         }
     }
@@ -102,6 +109,31 @@ public class TowerAi : MonoBehaviour
 
         yield return new WaitForSeconds(speed);
         isShooting = false;
+    }
+
+    IEnumerator MortarBehavior(float airTime, float nextShot)
+    {
+        mortarShooting = true;
+
+        mortarBarrelParticle.Play();
+        mortarBullet.SetActive(true);
+
+        yield return new WaitForSeconds(airTime);
+        mortarBullet.SetActive(false);
+
+        foreach(GameObject enemy in targetsInArea)
+        {
+            EnemyBehavior enemyBehavior = enemy.GetComponent<EnemyBehavior>();
+            enemyBehavior.EnemyTakeDamage(damage);
+            if (enemyBehavior.enemyHealth <= 0)
+            {
+                int destroyedEnemyInArea = targetsInArea.IndexOf(enemyBehavior.gameObject);
+                targetsInArea.RemoveAt(destroyedEnemyInArea);
+            }
+        }
+
+        yield return new WaitForSeconds(nextShot);
+        mortarShooting = false;
     }
     #endregion
     #region SetRadius
