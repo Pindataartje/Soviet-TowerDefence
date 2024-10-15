@@ -30,6 +30,9 @@ public class GunshotAudioManager : MonoBehaviour
 
     private void PlayGunshotSound()
     {
-        gunshotAudioSource.PlayOneShot(gunshotClip);
+        if(gunshotAudioSource != null)
+        {
+            gunshotAudioSource.PlayOneShot(gunshotClip);
+        }
     }
 }

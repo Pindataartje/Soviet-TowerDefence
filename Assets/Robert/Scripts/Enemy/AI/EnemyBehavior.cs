@@ -13,7 +13,7 @@ public class EnemyBehavior : MonoBehaviour
     GameObject checkpointParent;
     List<Transform> checkPoints = new List<Transform>();
     int checkpointNumber;
-    Vector3 target;
+    public Vector3 target;
 
     [Header("Enemy Stats")]
     public float enemyHealth;

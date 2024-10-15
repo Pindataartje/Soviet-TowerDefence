@@ -27,6 +27,7 @@ public class TowerAi : MonoBehaviour
     public bool isMortar;
     public float mortarBulletAirTime;
     public ParticleSystem mortarBarrelParticle;
+    public ParticleSystem mortarExplosion;
     public GameObject mortarBullet;
     bool mortarShooting;
 
@@ -75,7 +76,8 @@ public class TowerAi : MonoBehaviour
             foreach (GameObject target in targetsInArea)
             {
                 NavMeshAgent enemy = target.GetComponent<NavMeshAgent>();
-                enemy.speed -= speedDecrease;
+                float slowedDownSpeed = enemy.speed -= speedDecrease;
+                enemy.speed = slowedDownSpeed;
             }
         }
     }
@@ -88,7 +90,7 @@ public class TowerAi : MonoBehaviour
         if (isBarbedWire)
         {
             NavMeshAgent enemy = other.GetComponent<NavMeshAgent>();
-            enemy.speed += speedDecrease;
+            enemy.speed = 3.5f;
         }
     }
     #endregion
@@ -120,6 +122,7 @@ public class TowerAi : MonoBehaviour
 
         yield return new WaitForSeconds(airTime);
         mortarBullet.SetActive(false);
+        mortarExplosion.Play();
 
         foreach(GameObject enemy in targetsInArea)
         {

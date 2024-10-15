@@ -294,11 +294,11 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.5420553, b: 0.11698121, a: 1}
+    - _Color: {r: 0.8490566, g: 0.6362918, b: 0.25898883, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _EmissionColor: {r: 1, g: 0.60285735, b: 0.173585, a: 1}
+    - _EmissionColor: {r: 3.302814, g: 1.2341905, b: 0.32855222, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}

@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e25f81a034e6b448856bd6573672704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 0, y: 0, z: 0}
   enemyHealth: 30
   killCash: 50
   hpBar: {fileID: 5280447085260610763}
@@ -135,7 +136,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4481270080984534713}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.01
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

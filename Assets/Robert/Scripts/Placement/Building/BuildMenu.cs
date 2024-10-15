@@ -208,7 +208,7 @@ public class BuildMenu : MonoBehaviour
                                 foreach (GameObject behavior in inMapTowerBehavior)
                                 {
                                     behavior.GetComponent<TowerOptions>().TowerDeselect();
-                                    if (!tower.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                                    if (!behavior.GetComponent<TowerOptions>().towerOptionsIsOpen)
                                     {
                                         hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
                                     }
