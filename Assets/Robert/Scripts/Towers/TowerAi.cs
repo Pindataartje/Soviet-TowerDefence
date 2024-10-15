@@ -30,6 +30,11 @@ public class TowerAi : MonoBehaviour
     public ParticleSystem mortarExplosion;
     public GameObject mortarBullet;
     bool mortarShooting;
+    [Space]
+    public bool isAmmunition;
+    public float generateSpeed;
+    public int ammunitionPerTick;
+    bool waitForGenerate;
 
     [Header("Runtime Only")]
     public bool activeTower;
@@ -43,7 +48,9 @@ public class TowerAi : MonoBehaviour
     #region Update
     private void Update()
     {
-        if (!activeTower) return;
+        AmmunitionTower();
+
+        if (!activeTower || GetComponent<TowerOptions>().buildmenu.ammunition <= 0) return;
 
         if(targetsInArea.Count > 0)
         {
@@ -101,6 +108,8 @@ public class TowerAi : MonoBehaviour
 
         BulletParticle();
         EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
+        GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
+
         enemy.EnemyTakeDamage(damage);
         if (enemy.enemyHealth <= 0)
         {
@@ -127,6 +136,8 @@ public class TowerAi : MonoBehaviour
         foreach(GameObject enemy in targetsInArea)
         {
             EnemyBehavior enemyBehavior = enemy.GetComponent<EnemyBehavior>();
+            GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
+
             enemyBehavior.EnemyTakeDamage(damage);
             if (enemyBehavior.enemyHealth <= 0)
             {
@@ -159,5 +170,19 @@ public class TowerAi : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         activeTower = true;
+    }
+    public void AmmunitionTower()
+    {
+        if (isAmmunition && !waitForGenerate)
+        {
+            StartCoroutine(GenerateAmmo(generateSpeed));
+        }
+    }
+    IEnumerator GenerateAmmo(float speed)
+    {
+        waitForGenerate = true;
+        GetComponent<TowerOptions>().buildmenu.ammunition += ammunitionPerTick;
+        yield return new WaitForSeconds(speed);
+        waitForGenerate = false;
     }
 }

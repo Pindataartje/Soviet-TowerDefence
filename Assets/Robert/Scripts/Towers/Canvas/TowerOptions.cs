@@ -19,6 +19,8 @@ public class TowerOptions : MonoBehaviour
     public float damageBoost;
     public float fireRateBoost;
     public float radiusBoost;
+    [Space]
+    public bool isAmmunition;
 
     [Header("UI")]
     public TMP_Text towerLVL;
@@ -31,7 +33,7 @@ public class TowerOptions : MonoBehaviour
     GameObject upgradeMenuUI;
     Animator menuUIAnim;
     TowerOptionsData towerOptionsData;
-    BuildMenu buildmenu;
+    public BuildMenu buildmenu;
     public TowerAi towerStats;
     public bool upgradeMenuHasBeenOpened;
     public void Start()

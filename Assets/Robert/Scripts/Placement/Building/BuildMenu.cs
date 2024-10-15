@@ -31,7 +31,10 @@ public class BuildMenu : MonoBehaviour
     public GameObject buildMenuUI;
 
     public int currency;
+    public int ammunition;
+    public int currentAmmunitionNeeded;
     public TMP_Text currencyText;
+    public TMP_Text ammunitionText;
 
     [Header("Dev tools")]
     public bool enableDevTools;
@@ -60,6 +63,7 @@ public class BuildMenu : MonoBehaviour
     }
     private void Update()
     {
+        ammunitionText.text = ammunition.ToString();
         currencyText.text = currency.ToString();
         if(Input.GetKeyDown(KeyCode.B))
         {
@@ -138,6 +142,16 @@ public class BuildMenu : MonoBehaviour
             selectedVignette = Instantiate(towerVignettePrefabs[3]);
 
             selectedTowerNumber = 3;
+            towerBeingPlaced = true;
+        }
+    }
+    public void TowerFive()
+    {
+        if (currency >= towerBehavior[4].GetComponent<TowerAi>().cost)
+        {
+            selectedVignette = Instantiate(towerVignettePrefabs[4]);
+
+            selectedTowerNumber = 4;
             towerBeingPlaced = true;
         }
     }
@@ -232,6 +246,18 @@ public class BuildMenu : MonoBehaviour
                         }
                     }
                 }
+            }
+        }
+    }
+    public void ExitUpgradeButton()
+    {
+        foreach (GameObject tower in towersInMap)
+        {
+            inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
+
+            foreach (GameObject behavior in inMapTowerBehavior)
+            {
+                behavior.GetComponent<TowerOptions>().TowerDeselect();
             }
         }
     }

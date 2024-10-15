@@ -10,8 +10,8 @@ public class EnemyBehavior : MonoBehaviour
 {
     NavMeshAgent agent;
     WaveSpawner waveSpawner;
-    GameObject checkpointParent;
-    List<Transform> checkPoints = new List<Transform>();
+    public GameObject checkpointParent;
+    public List<Transform> checkPoints = new List<Transform>();
     int checkpointNumber;
     public Vector3 target;
 
@@ -52,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     public void Update()
     {
-        if(Vector3.Distance(transform.position, target) < 1)
+        if(Vector3.Distance(transform.position, target) < 4)
         {
             UpdateCheckpoint();
             IterateCheckpointNumber();
@@ -62,6 +62,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         target = checkPoints[checkpointNumber].transform.position;
         agent.SetDestination(target);
+        Debug.Log(Vector3.Distance(transform.position, target));
 
         Debug.Log("Updating Checkpoint");
     }
