@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7490888250638097685}
   - component: {fileID: 8768118912017122809}
   m_Layer: 5
-  m_Name: Roebels
+  m_Name: RoebelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.004689942, y: 0.625}
   m_AnchorMax: {x: 0.025478896, y: 0.9583417}
-  m_AnchoredPosition: {x: 0.6300049, y: 0.29999542}
+  m_AnchoredPosition: {x: 0.6298828, y: 0.29999542}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8625374127157016519
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5342650848795061882}
   - component: {fileID: 5760544525427532387}
   m_Layer: 5
-  m_Name: WAVENUMBER
+  m_Name: WaveNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 1231009993892320927}
   - component: {fileID: 6153404607310924572}
   m_Layer: 5
-  m_Name: Roebels (1)
+  m_Name: WaveCountdownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,10 +457,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7253306435595144448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5103944, y: 0}
+  m_AnchorMin: {x: 0.6496282, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.82486, y: 0}
-  m_SizeDelta: {x: -21.8847, y: 0.0000038147}
+  m_AnchoredPosition: {x: -10.883605, y: 0}
+  m_SizeDelta: {x: -21.76721, y: 0.0000038147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1231009993892320927
 CanvasRenderer:
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 4147860266296901500}
   - component: {fileID: 8908219720581371301}
   m_Layer: 5
-  m_Name: RoebelImage (1)
+  m_Name: AmmoImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 7695589826850608941}
   - component: {fileID: 963611858129366855}
   m_Layer: 5
-  m_Name: WaveCountdownText
+  m_Name: WaveCountdownParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'NEXT WAVE:'
+  m_text: 'NEXT WAVE IN:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbb2d1e769a135e41bc3cbf28a968916, type: 2}
   m_sharedMaterial: {fileID: 1015305199021158298, guid: cbb2d1e769a135e41bc3cbf28a968916,
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 5715485244372741736}
   - component: {fileID: 5715455865042108792}
   m_Layer: 5
-  m_Name: ENEMIESNUMBER
+  m_Name: EnemiesNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 274883199372027194}
   - component: {fileID: 8733446896802222422}
   m_Layer: 5
-  m_Name: ENEMIESPARENT
+  m_Name: EnemiesParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 6619534628968233512}
   - component: {fileID: 5702590014954055904}
   m_Layer: 5
-  m_Name: WAVEPARENT
+  m_Name: WaveParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,7 +1530,7 @@ GameObject:
   - component: {fileID: 7069963716901829673}
   - component: {fileID: 8820608443295758553}
   m_Layer: 5
-  m_Name: Roebels
+  m_Name: AmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

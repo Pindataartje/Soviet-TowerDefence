@@ -87,9 +87,12 @@ MonoBehaviour:
   damageBoost: 1
   fireRateBoost: 0.05
   radiusBoost: 1
+  isAmmunition: 0
   towerLVL: {fileID: 0}
   towerOptionsIsOpen: 0
+  buildmenu: {fileID: 0}
   towerStats: {fileID: 2871355025487735103}
+  upgradeMenuHasBeenOpened: 0
 --- !u!114 &2871355025487735103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,11 +111,19 @@ MonoBehaviour:
   radiusVisual: {fileID: 8364941941640705725}
   towerName: Bunker
   cost: 200
-  damage: 2
-  fireSpeed: 0.3
+  damage: 1
+  fireSpeed: 0.1
   radius: 15
   isBarbedWire: 0
   speedDecrease: 0
+  isMortar: 0
+  mortarBulletAirTime: 0
+  mortarBarrelParticle: {fileID: 0}
+  mortarExplosion: {fileID: 0}
+  mortarBullet: {fileID: 0}
+  isAmmunition: 0
+  generateSpeed: 0
+  ammunitionPerTick: 0
   activeTower: 0
 --- !u!136 &7968236103035641629
 CapsuleCollider:

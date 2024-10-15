@@ -153,8 +153,11 @@ public class TowerAi : MonoBehaviour
     #region SetRadius
     public void SetRadius()
     {
-        detectArea = GetComponent<CapsuleCollider>();
-        detectArea.radius = radius;
+        if(detectArea != null)
+        {
+            detectArea = GetComponent<CapsuleCollider>();
+            detectArea.radius = radius;
+        }
 
         //float detectAreaValue = detectArea.radius * 2;
         //radiusVisual.transform.localScale = new Vector3(detectAreaValue, detectAreaValue, detectAreaValue);
