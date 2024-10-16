@@ -4042,11 +4042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1542116646}
+      objectReference: {fileID: 1542116652}
     - target: {fileID: 4864604750478071019, guid: 1defaa620cc26c44db3708d32ff75dfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMainMenu
+      value: LoadSceneByIndex
       objectReference: {fileID: 0}
     - target: {fileID: 5215700935942702362, guid: 1defaa620cc26c44db3708d32ff75dfc,
         type: 3}
@@ -5487,6 +5487,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d7da2fa5ab5742be0bf92aa58f454, type: 3}
+--- !u!114 &1473198326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2986394530469037278, guid: 1defaa620cc26c44db3708d32ff75dfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1041630047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1473198327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8251135425532766492, guid: 1defaa620cc26c44db3708d32ff75dfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1041630047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1474255302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2591691454886464665, guid: e9f1795e490d2a249b4a1f98a58f7cd0,
@@ -5656,6 +5674,7 @@ GameObject:
   - component: {fileID: 1542116647}
   - component: {fileID: 1542116646}
   - component: {fileID: 1542116645}
+  - component: {fileID: 1542116652}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5699,7 +5718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1041630048}
-  mainMenuSceneName: MainMenu
+  mainMenuSceneName: MainMenu1
   pauseMenuUIElements:
   - {fileID: 560962227}
   - {fileID: 560962225}
@@ -6008,6 +6027,20 @@ Transform:
   - {fileID: 1630497250}
   m_Father: {fileID: 1624562216}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &1542116652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542116644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d86dfb1db9d1004081755fdf4595f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 1473198327}
+  loadingSlider: {fileID: 1473198326}
 --- !u!4 &1560741154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 938201231798822115, guid: 1982725ef622c1446856dc78058c331f,
