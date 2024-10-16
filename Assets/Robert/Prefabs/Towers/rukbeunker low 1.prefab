@@ -370,6 +370,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5778976092093591610}
     m_Modifications:
+    - target: {fileID: 1525483696716050240, guid: a17292ef1dfd44f46a69fcc824897075,
+        type: 3}
+      propertyPath: gunshotClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c348cb875d7f204682b19590bb8918b, type: 3}
     - target: {fileID: 1840812958305791342, guid: a17292ef1dfd44f46a69fcc824897075,
         type: 3}
       propertyPath: looping
@@ -404,6 +409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899595860450082713, guid: a17292ef1dfd44f46a69fcc824897075,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 2194154646664876190, guid: a17292ef1dfd44f46a69fcc824897075,
         type: 3}

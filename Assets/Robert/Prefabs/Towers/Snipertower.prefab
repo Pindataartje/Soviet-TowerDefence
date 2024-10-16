@@ -55,9 +55,12 @@ MonoBehaviour:
   damageBoost: 15
   fireRateBoost: 0.1
   radiusBoost: 5
+  isAmmunition: 0
   towerLVL: {fileID: 0}
   towerOptionsIsOpen: 0
-  menuUIAnim: {fileID: 0}
+  buildmenu: {fileID: 0}
+  towerStats: {fileID: 0}
+  upgradeMenuHasBeenOpened: 0
 --- !u!114 &3151730221182349294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,11 +79,20 @@ MonoBehaviour:
   radiusVisual: {fileID: 6958409466623713341}
   towerName: Sniper
   cost: 400
-  damage: 30
-  fireSpeed: 1
+  damage: 25
+  fireSpeed: 5
   radius: 120
   isBarbedWire: 0
   speedDecrease: 0
+  isMortar: 0
+  mortarBulletAirTime: 0
+  mortarBarrelParticle: {fileID: 0}
+  mortarExplosion: {fileID: 0}
+  mortarBullet: {fileID: 0}
+  isAmmunition: 0
+  generateSpeed: 0
+  ammunitionPerTick: 0
+  activeTower: 0
 --- !u!136 &2703157628061719786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +156,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8213886044129927631}
     m_Modifications:
+    - target: {fileID: 1525483696716050240, guid: a17292ef1dfd44f46a69fcc824897075,
+        type: 3}
+      propertyPath: gunshotClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d523049429cca04c8a77be31b94ea50, type: 3}
+    - target: {fileID: 1899595860450082713, guid: a17292ef1dfd44f46a69fcc824897075,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.627
+      objectReference: {fileID: 0}
     - target: {fileID: 2194154646664876190, guid: a17292ef1dfd44f46a69fcc824897075,
         type: 3}
       propertyPath: m_Name
