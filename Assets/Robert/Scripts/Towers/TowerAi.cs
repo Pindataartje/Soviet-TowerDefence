@@ -43,7 +43,7 @@ public class TowerAi : MonoBehaviour
     void Start()
     {
         SetRadius();
-        StartCoroutine(WaitForActivating(2));
+        StartCoroutine(WaitForActivating(0.5f));
     }
     #region Update
     private void Update()
@@ -64,7 +64,7 @@ public class TowerAi : MonoBehaviour
             }
             if (isMortar && !mortarShooting)
             {
-                StartCoroutine(MortarBehavior(mortarBulletAirTime, fireSpeed));
+            StartCoroutine(MortarBehavior(mortarBulletAirTime, fireSpeed));
             }
         }
     }
@@ -80,11 +80,10 @@ public class TowerAi : MonoBehaviour
         }
         if (isBarbedWire)
         {
-            foreach (GameObject target in targetsInArea)
+            if (other.tag == "Enemy")
             {
-                NavMeshAgent enemy = target.GetComponent<NavMeshAgent>();
-                float slowedDownSpeed = enemy.speed -= speedDecrease;
-                enemy.speed = slowedDownSpeed;
+                NavMeshAgent enemy = other.GetComponent<NavMeshAgent>();
+                enemy.speed -= speedDecrease;
             }
         }
     }
@@ -96,8 +95,11 @@ public class TowerAi : MonoBehaviour
         }
         if (isBarbedWire)
         {
-            NavMeshAgent enemy = other.GetComponent<NavMeshAgent>();
-            enemy.speed = 3.5f;
+            if (other.tag == "Enemy")
+            {
+                NavMeshAgent enemy = other.GetComponent<NavMeshAgent>();
+                enemy.speed += speedDecrease;
+            }
         }
     }
     #endregion

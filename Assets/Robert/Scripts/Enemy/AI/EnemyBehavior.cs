@@ -1,7 +1,5 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -52,7 +50,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     public void Update()
     {
-        if(Vector3.Distance(transform.position, target) < 4)
+        if(Vector3.Distance(transform.position, target) < 2)
         {
             UpdateCheckpoint();
             IterateCheckpointNumber();

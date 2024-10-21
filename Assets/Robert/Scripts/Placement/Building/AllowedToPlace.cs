@@ -16,7 +16,11 @@ public class AllowedToPlace : MonoBehaviour
         }
         else
         {
-            if (other.tag == "EnemyPath")
+            if (other.tag == "NonPlaceable" || other.tag == "Tower" || other.tag == "Enemy" || other.tag == "Wire")
+            {
+                GetComponent<SelectedTower>().objectIsOnPath = true;
+            }
+            else if (other.tag == "EnemyPath")
             {
                 GetComponent<SelectedTower>().objectIsOnPath = false;
             }
@@ -33,7 +37,11 @@ public class AllowedToPlace : MonoBehaviour
         }
         else
         {
-            if (other.tag == "EnemyPath")
+            if (other.tag == "NonPlaceable" || other.tag == "Tower" || other.tag == "Enemy" || other.tag == "Wire")
+            {
+                GetComponent<SelectedTower>().objectIsOnPath = true;
+            }
+            else if (other.tag == "EnemyPath")
             {
                 GetComponent<SelectedTower>().objectIsOnPath = false;
             }
@@ -50,7 +58,11 @@ public class AllowedToPlace : MonoBehaviour
         }
         else
         {
-            if (other.tag == "EnemyPath")
+            if (other.tag == "NonPlaceable" || other.tag == "Tower" || other.tag == "Enemy" || other.tag == "Wire")
+            {
+                GetComponent<SelectedTower>().objectIsOnPath = true;
+            }
+            else if (other.tag == "EnemyPath")
             {
                 GetComponent<SelectedTower>().objectIsOnPath = true;
             }

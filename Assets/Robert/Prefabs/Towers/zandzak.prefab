@@ -4978,9 +4978,12 @@ MonoBehaviour:
   damageBoost: 25
   fireRateBoost: 0.25
   radiusBoost: 0
+  isAmmunition: 0
+  onlySellable: 0
   towerLVL: {fileID: 0}
   towerOptionsIsOpen: 0
-  towerStats: {fileID: 0}
+  buildmenu: {fileID: 0}
+  towerStats: {fileID: 7274214478337936995}
   upgradeMenuHasBeenOpened: 0
 --- !u!114 &7274214478337936995
 MonoBehaviour:
@@ -4998,7 +5001,7 @@ MonoBehaviour:
   particleParent: {fileID: 5682179625613291318}
   bullet: {fileID: 0}
   radiusVisual: {fileID: 1264671214695101481}
-  towerName: Bunker
+  towerName: Mortar
   cost: 1000
   damage: 75
   fireSpeed: 6
@@ -5010,6 +5013,9 @@ MonoBehaviour:
   mortarBarrelParticle: {fileID: 609227415002839134}
   mortarExplosion: {fileID: 6794908528178670898}
   mortarBullet: {fileID: 1666699132678145786}
+  isAmmunition: 0
+  generateSpeed: 0
+  ammunitionPerTick: 0
   activeTower: 0
 --- !u!136 &486626223747709504
 CapsuleCollider:
@@ -5320,6 +5326,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: zandzak
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 537f22df4b5b9d449ad9ccdde022b80f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 537f22df4b5b9d449ad9ccdde022b80f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5331,7 +5347,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2349502086129751025}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 537f22df4b5b9d449ad9ccdde022b80f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8770700584336637279}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 537f22df4b5b9d449ad9ccdde022b80f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5648018901486045720}
   m_SourcePrefab: {fileID: 100100000, guid: 537f22df4b5b9d449ad9ccdde022b80f, type: 3}
 --- !u!4 &4946319096432412242 stripped
 Transform:
@@ -5339,6 +5363,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4840914949455258041}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5759835292163218664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 537f22df4b5b9d449ad9ccdde022b80f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4840914949455258041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8770700584336637279
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759835292163218664}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 537f22df4b5b9d449ad9ccdde022b80f, type: 3}
+--- !u!54 &-5648018901486045720
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759835292163218664}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5132514531144525968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5355,7 +5434,7 @@ PrefabInstance:
     - target: {fileID: 6248560869718252729, guid: f662a89c0aa3f2d4e940fecb9c03e916,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7467321637112380257, guid: f662a89c0aa3f2d4e940fecb9c03e916,
         type: 3}

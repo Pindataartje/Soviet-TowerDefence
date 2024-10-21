@@ -191,6 +191,7 @@ public class BuildMenu : MonoBehaviour
 
                     GameObject placedTower = Instantiate(towers[selectedTowerNumber], selectedVignette.transform.position, selectedVignette.transform.rotation);
                     towersInMap.Add(placedTower);
+                    inMapTowerBehavior.Add(placedTower.transform.GetChild(0).gameObject);
                     currency -= towerBehavior[selectedTowerNumber].GetComponent<TowerAi>().cost;
 
                     towerBeingPlaced = false;
@@ -215,17 +216,13 @@ public class BuildMenu : MonoBehaviour
                     {
                         if (!buildMenuIsOpen)
                         {
-                            foreach (GameObject tower in towersInMap)
+                            foreach (GameObject behavior in inMapTowerBehavior)
                             {
-                                inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
+                                behavior.GetComponent<TowerOptions>().TowerDeselect();
 
-                                foreach (GameObject behavior in inMapTowerBehavior)
+                                if (!behavior.GetComponent<TowerOptions>().towerOptionsIsOpen)
                                 {
-                                    behavior.GetComponent<TowerOptions>().TowerDeselect();
-                                    if (!behavior.GetComponent<TowerOptions>().towerOptionsIsOpen)
-                                    {
-                                        hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
-                                    }
+                                    hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
                                 }
                             }
                         }
@@ -236,14 +233,9 @@ public class BuildMenu : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    foreach(GameObject tower in towersInMap)
+                    foreach (GameObject behavior in inMapTowerBehavior)
                     {
-                        inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
-
-                        foreach(GameObject behavior in inMapTowerBehavior)
-                        {
-                            behavior.GetComponent<TowerOptions>().TowerDeselect();
-                        }
+                        behavior.GetComponent<TowerOptions>().TowerDeselect();
                     }
                 }
             }
@@ -251,14 +243,9 @@ public class BuildMenu : MonoBehaviour
     }
     public void ExitUpgradeButton()
     {
-        foreach (GameObject tower in towersInMap)
+        foreach (GameObject behavior in inMapTowerBehavior)
         {
-            inMapTowerBehavior.Add(tower.transform.GetChild(0).gameObject);
-
-            foreach (GameObject behavior in inMapTowerBehavior)
-            {
-                behavior.GetComponent<TowerOptions>().TowerDeselect();
-            }
+            behavior.GetComponent<TowerOptions>().TowerDeselect();
         }
     }
     public IEnumerator WaitToBuildAgain(float waitTime)
