@@ -42,12 +42,20 @@ public class CameraMovement : MonoBehaviour
 
         if(goBackToSpawn)
         {
-            elapsedTime += Time.deltaTime / lerpSpeed;
-            transform.position = Vector3.Lerp(transform.position, cameraSpawn.transform.position, elapsedTime);
+            //transform.position = Vector3.Slerp(transform.position, cameraSpawn.transform.position, valueToLerp * Time.deltaTime);
 
-            if (elapsedTime >= 1f)
+            ////if(Vector3.Distance(transform.position, cameraSpawn.transform.position) < 0.05f)
+            ////{
+            ////    Debug.Log(elapsedTime + " in " + time + " seconds");
+            ////    time = 0f;
+            ////}
+            //if (valueToLerp >= 0.5f)
+            //{
+            //    goBackToSpawn = false;
+            //}
+            transform.position = Vector3.MoveTowards(transform.position, cameraSpawn.transform.position, lerpSpeed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, cameraSpawn.transform.position) < 0.05f)
             {
-                elapsedTime = 0f;
                 goBackToSpawn = false;
             }
         }
@@ -57,7 +65,6 @@ public class CameraMovement : MonoBehaviour
     {
         if(other.transform.tag == "Border")
         {
-            valueToLerp = 1 / lerpSpeed;
             goBackToSpawn = true;
         }
     }
