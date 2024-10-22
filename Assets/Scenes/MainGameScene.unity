@@ -5806,6 +5806,21 @@ PrefabInstance:
       propertyPath: m_MaxParticleSize
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7256584393021346740, guid: 70c1b48304779224ca89304cbc074e77,
+        type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256584393021346740, guid: 70c1b48304779224ca89304cbc074e77,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256584393021346740, guid: 70c1b48304779224ca89304cbc074e77,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8436618714122360056, guid: 70c1b48304779224ca89304cbc074e77,
         type: 3}
       propertyPath: m_Name
