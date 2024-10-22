@@ -277,6 +277,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   enemyHealth: 300
   killCash: 100
+  BaseDamage: 20
   hpBar: {fileID: 6623327161618680649}
 --- !u!195 &5882499424499013671
 NavMeshAgent:

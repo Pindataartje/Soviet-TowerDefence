@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class WaveSpawner : MonoBehaviour
 
     #region UI
     [Header("UI")]
+    public Slider baseHPSlider;
+    [Space]
+    public int maxBaseHP;
+    public int currentBaseHP;
+
     [Header("Countdown")]
     public TMP_Text waveCountdownText; 
     float waveCountdown;
@@ -39,10 +45,26 @@ public class WaveSpawner : MonoBehaviour
 
     [Header("Current Wave")]
     public TMP_Text currentWaveText;
+
+    GameObject winScreen;
+    GameObject loseScreen;
     #endregion
 
+    private void Start()
+    {
+        winScreen = GameObject.FindGameObjectWithTag("Win");
+        loseScreen = GameObject.FindGameObjectWithTag("Lose");
+
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
+
+        baseHPSlider.maxValue = maxBaseHP;
+        currentBaseHP = maxBaseHP;
+    }
     public void Update()
     {
+        baseHPSlider.value = currentBaseHP;
+
         if (!noMoreWaves)
         {
             enemyCounterText.text = enemies.Count.ToString();
@@ -60,6 +82,16 @@ public class WaveSpawner : MonoBehaviour
 
                 waveCountdown -= Time.deltaTime;
             }
+        }
+        if(noMoreWaves && enemies.Count == 0)
+        {
+            winScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        if(currentBaseHP <= 0)
+        {
+            loseScreen.SetActive(false);
+            Time.timeScale = 0f;
         }
     }
     IEnumerator SpawnEnemies(int enemiesToSpawn)
@@ -87,5 +119,9 @@ public class WaveSpawner : MonoBehaviour
         {
             noMoreWaves = true;
         }
+    }
+    public void GoBackToMenuTime()
+    {
+        Time.timeScale = 1f;
     }
 }

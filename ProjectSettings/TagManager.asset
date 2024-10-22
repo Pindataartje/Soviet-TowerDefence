@@ -17,6 +17,8 @@ TagManager:
   - UpgradeUI
   - Wire
   - UI
+  - Lose
+  - Win
   layers:
   - Default
   - TransparentFX

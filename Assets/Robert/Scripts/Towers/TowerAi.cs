@@ -168,8 +168,11 @@ public class TowerAi : MonoBehaviour
     #endregion
     public void BulletParticle()
     {
-        particleParent.transform.LookAt(targetsInArea[0].transform.position);
-        bullet.Play();
+        if (targetsInArea[0] != null)
+        {
+            particleParent.transform.LookAt(targetsInArea[0].transform.position);
+            bullet.Play();
+        }
     }
     public IEnumerator WaitForActivating(float waitTime)
     {

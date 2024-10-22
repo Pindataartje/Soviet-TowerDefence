@@ -17,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     public float enemyHealth;
     float currentHealth;
     public int killCash;
+    public int BaseDamage;
 
     [Header("UI")]
     public Slider hpBar;
@@ -69,7 +70,10 @@ public class EnemyBehavior : MonoBehaviour
         checkpointNumber++;
         if(checkpointNumber == checkPoints.Count)
         {
-            checkpointNumber = 0;
+            waveSpawner.currentBaseHP -= BaseDamage;
+            int thisGameobjectIndex = waveSpawner.enemies.IndexOf(gameObject);
+            waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
+            Destroy(gameObject);
         }
     }
     #endregion
