@@ -135,8 +135,8 @@ public class TowerOptions : MonoBehaviour
                 towerStats.damage += damageBoost;
                 towerStats.fireSpeed -= fireRateBoost;
 
-                towerStats.radius += radiusBoost;
-                radiusVisual.transform.localScale += new Vector3(radiusBoost * 2, radiusBoost * 2, radiusBoost * 2);
+                //towerStats.radius += radiusBoost;
+                //radiusVisual.transform.localScale += new Vector3(radiusBoost * 2, radiusBoost * 2, radiusBoost * 2);
 
                 if(timesUpgraded < maxAmountOfUpgrades)
                 {

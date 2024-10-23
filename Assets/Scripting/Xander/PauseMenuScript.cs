@@ -8,16 +8,22 @@ public class PauseMenuScript : MonoBehaviour
     public string mainMenuSceneName = "MainMenu";
     public GameObject[] pauseMenuUIElements;
 
+    GameObject buildmanager;
+    BuildMenu buildmenu;
     void Start()
     {
         pauseMenuCanvas.SetActive(false);
+
+        buildmanager = GameObject.FindGameObjectWithTag("BuildManager");
+        buildmenu = buildmanager.GetComponent<BuildMenu>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu();
+            if(!buildmenu.towerBeingPlaced)
+                TogglePauseMenu();
         }
     }
 

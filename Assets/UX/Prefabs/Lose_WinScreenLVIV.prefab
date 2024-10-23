@@ -739,7 +739,6 @@ GameObject:
   - component: {fileID: 114866897055105159}
   - component: {fileID: 3226791786731014699}
   - component: {fileID: 7327232111219119362}
-  - component: {fileID: 4226814710355193273}
   - component: {fileID: 566865848107030912}
   m_Layer: 5
   m_Name: Button
@@ -851,7 +850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4226814710355193273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadSceneNormally
         m_Mode: 3
@@ -863,20 +862,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4226814710355193273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5390958083170043862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d86dfb1db9d1004081755fdf4595f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 0}
-  loadingSlider: {fileID: 0}
 --- !u!114 &566865848107030912
 MonoBehaviour:
   m_ObjectHideFlags: 0

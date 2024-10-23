@@ -15,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Enemy Stats")]
     public float enemyHealth;
-    float currentHealth;
+    public float currentHealth;
     public int killCash;
     public int BaseDamage;
 
@@ -84,9 +84,6 @@ public class EnemyBehavior : MonoBehaviour
         if(currentHealth <= 0)
         {
             buildmenu.currency += killCash;
-            int thisGameobjectIndex = waveSpawner.enemies.IndexOf(gameObject);
-            waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
-            Destroy(gameObject);
         }
     }
 }

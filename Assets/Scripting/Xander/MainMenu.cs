@@ -20,6 +20,12 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LoadSceneWithRealProgress(sceneIndex)); // Start loading the scene with real progress
     }
 
+    public void LoadSceneInstantly(int sceneIndex)
+    {
+        Time.timeScale = 1f; // Reset the time scale to normal in case the game is paused
+        SceneManager.LoadScene(sceneIndex); // Immediately load the scene without a loading screen or slider
+    }
+
     // Fake loading with random progress and smooth movements
     private IEnumerator LoadSceneWithFakeProgress(int sceneIndex)
     {

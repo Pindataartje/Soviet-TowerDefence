@@ -44,32 +44,40 @@ public class TowerAi : MonoBehaviour
     [Header("Runtime Only")]
     public bool activeTower;
     bool isShooting;
+
+    GameObject checkpointParent;
+    WaveSpawner waveSpawner;
     
     void Start()
     {
         SetRadius();
         StartCoroutine(WaitForActivating(0.5f));
+
+        checkpointParent = GameObject.FindGameObjectWithTag("SpawnPoint");
+        waveSpawner = checkpointParent.GetComponentInParent<WaveSpawner>();
     }
     #region Update
     private void Update()
     {
         AmmunitionTower();
 
-        if (!activeTower || GetComponent<TowerOptions>().buildmenu.ammunition <= 0) return;
-
-        if(targetsInArea.Count > 0)
-        {
+        if (targetsInArea.Count > 0)
             if (targetsInArea[0] == null)
             {
                 targetsInArea.RemoveAt(0);
             }
+
+        if (!activeTower || GetComponent<TowerOptions>().buildmenu.ammunition <= 0) return;
+
+        if(targetsInArea.Count > 0)
+        {
             if(!isBarbedWire && !isMortar && !isShooting)
             {
                 StartCoroutine(FireRate(fireSpeed));
             }
             if (isMortar && !mortarShooting)
             {
-            StartCoroutine(MortarBehavior(mortarBulletAirTime, fireSpeed));
+                StartCoroutine(MortarBehavior(mortarBulletAirTime, fireSpeed));
             }
         }
     }
@@ -113,17 +121,21 @@ public class TowerAi : MonoBehaviour
     {
         isShooting = true;
 
-        if (targetsInArea[0] != null)
+        if (targetsInArea.Count >= 1)
         {
             BulletParticle();
             EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
             GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
 
             enemy.EnemyTakeDamage(damage);
-            if (enemy.enemyHealth <= 0)
+            if (enemy.currentHealth <= 0)
             {
                 int destroyedEnemyInArea = targetsInArea.IndexOf(enemy.gameObject);
                 targetsInArea.RemoveAt(destroyedEnemyInArea);
+
+                int thisGameobjectIndex = waveSpawner.enemies.IndexOf(enemy.gameObject);
+                waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
+                Destroy(enemy.gameObject);
             }
             Debug.Log("shooting");
         }
@@ -153,6 +165,10 @@ public class TowerAi : MonoBehaviour
             {
                 int destroyedEnemyInArea = targetsInArea.IndexOf(enemyBehavior.gameObject);
                 targetsInArea.RemoveAt(destroyedEnemyInArea);
+
+                int thisGameobjectIndex = waveSpawner.enemies.IndexOf(enemyBehavior.gameObject);
+                waveSpawner.enemies.RemoveAt(thisGameobjectIndex);
+                Destroy(gameObject);
             }
         }
 
@@ -179,7 +195,7 @@ public class TowerAi : MonoBehaviour
         particleParent.transform.LookAt(targetsInArea[0].transform.position);
         bullet.Play();
 
-        if(bulletWoosh[0] != null)
+        if(bulletWoosh.Count >= 1)
         {
             Debug.Log("wooshing");
             int wooshIndex = Random.Range(0, bulletWoosh.Count);
