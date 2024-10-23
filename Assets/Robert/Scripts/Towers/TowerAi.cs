@@ -36,6 +36,11 @@ public class TowerAi : MonoBehaviour
     public int ammunitionPerTick;
     bool waitForGenerate;
 
+    [Header("Stats")]
+    public List<AudioClip> bulletWoosh = new List<AudioClip>();
+    AudioClip bulletWooshClip;
+    public AudioSource bulletWooshSource;
+
     [Header("Runtime Only")]
     public bool activeTower;
     bool isShooting;
@@ -173,6 +178,16 @@ public class TowerAi : MonoBehaviour
     {
         particleParent.transform.LookAt(targetsInArea[0].transform.position);
         bullet.Play();
+
+        if(bulletWoosh[0] != null)
+        {
+            Debug.Log("wooshing");
+            int wooshIndex = Random.Range(0, bulletWoosh.Count);
+            bulletWooshClip = bulletWoosh[wooshIndex];
+
+            bulletWooshSource.clip = bulletWooshClip;
+            bulletWooshSource.Play();
+        }
     }
     public IEnumerator WaitForActivating(float waitTime)
     {

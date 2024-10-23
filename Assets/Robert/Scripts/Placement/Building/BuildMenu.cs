@@ -67,6 +67,9 @@ public class BuildMenu : MonoBehaviour
         currencyText.text = currency.ToString();
         if(Input.GetKeyDown(KeyCode.B))
         {
+            towerBeingPlaced = false;
+            Destroy(selectedVignette);
+
             if (!buildMenuIsOpen && !upgradeMenuIsOpen)
             {
                 if (!isTestScene)
@@ -75,6 +78,7 @@ public class BuildMenu : MonoBehaviour
                     buildMenuUI.SetActive(true);
                 
                 buildMenuIsOpen = true;
+
             }
             else
             {

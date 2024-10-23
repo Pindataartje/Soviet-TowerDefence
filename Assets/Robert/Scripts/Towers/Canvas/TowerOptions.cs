@@ -129,6 +129,8 @@ public class TowerOptions : MonoBehaviour
             Debug.Log("you have enough money to upgrade");
             if (maxAmountOfUpgrades > timesUpgraded)
             {
+                buildmenu.currency -= upgradeCost;
+
                 timesUpgraded++;
                 towerStats.damage += damageBoost;
                 towerStats.fireSpeed -= fireRateBoost;
@@ -142,7 +144,6 @@ public class TowerOptions : MonoBehaviour
                     upgradeCost += costBoostPerUpgrade;
 
                 }
-                buildmenu.currency -= upgradeCost;
 
                 SetUpgradeMenuData();
                 if (towerLVL != null)
