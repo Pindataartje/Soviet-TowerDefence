@@ -103,16 +103,15 @@ public class WaveSpawner : MonoBehaviour
 
             currentWaveText.text = currentWave.ToString();
 
-            for (int i = 0; i < enemiesToSpawn / enemyPrefabs.Length; i++)
+            if (currentWave == 1)
             {
-                Debug.Log(enemiesToSpawn);
+                GameObject enemy = Instantiate(enemyPrefabs[0], spawnPoint.transform.position, spawnPoint.transform.rotation);
+                enemies.Add(enemy);
+            }
 
-                if (currentWave == 1)
-                {
-                    GameObject enemy = Instantiate(enemyPrefabs[0], spawnPoint.transform.position, spawnPoint.transform.rotation);
-                    enemies.Add(enemy);
-                }
-                if (currentWave >= 2)
+            if (currentWave >= 2)
+            {
+                for (int i = 0; i < enemiesToSpawn / enemyPrefabs.Length; i++)
                 {
                     for (int e = 0; e < enemyPrefabs.Length; e++)
                     {
@@ -120,8 +119,8 @@ public class WaveSpawner : MonoBehaviour
                         enemies.Add(enemy);
                     }
                 }
-                yield return new WaitForSeconds(timeBetweenSpawns);
             }
+            yield return new WaitForSeconds(timeBetweenSpawns);
             spawningWave = false;
         }
         else
