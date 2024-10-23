@@ -50,6 +50,7 @@ MonoBehaviour:
   costBoostPerUpgrade: 0
   sellvalue: 50
   maxAmountOfUpgrades: 0
+  timesUpgraded: 0
   damageBoost: 0
   fireRateBoost: 0
   radiusBoost: 0
@@ -89,8 +90,10 @@ MonoBehaviour:
   mortarExplosion: {fileID: 0}
   mortarBullet: {fileID: 0}
   isAmmunition: 1
-  generateSpeed: 10
-  ammunitionPerTick: 50
+  generateSpeed: 0.3
+  ammunitionPerTick: 1
+  bulletWoosh: []
+  bulletWooshSource: {fileID: 0}
   activeTower: 0
 --- !u!1001 &8732041897614221050
 PrefabInstance:

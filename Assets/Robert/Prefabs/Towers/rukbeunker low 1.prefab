@@ -86,8 +86,8 @@ MonoBehaviour:
   sellvalue: 200
   maxAmountOfUpgrades: 3
   timesUpgraded: 0
-  damageBoost: 1
-  fireRateBoost: 0.01
+  damageBoost: 0.75
+  fireRateBoost: 0.005
   radiusBoost: 1
   isAmmunition: 0
   onlySellable: 0
@@ -114,8 +114,8 @@ MonoBehaviour:
   radiusVisual: {fileID: 8364941941640705725}
   towerName: Bunker
   cost: 200
-  damage: 1
-  fireSpeed: 0.1
+  damage: 1.5
+  fireSpeed: 0.08
   radius: 15
   isBarbedWire: 0
   speedDecrease: 0
