@@ -81,9 +81,9 @@ MonoBehaviour:
   radiusVisual: {fileID: 6958409466623713341}
   towerName: Sniper
   cost: 400
-  damage: 25
-  fireSpeed: 5
-  radius: 120
+  damage: 35
+  fireSpeed: 2.5
+  radius: 130
   isBarbedWire: 0
   speedDecrease: 0
   isMortar: 0
