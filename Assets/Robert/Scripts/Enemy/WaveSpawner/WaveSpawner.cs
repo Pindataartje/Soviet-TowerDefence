@@ -90,7 +90,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if(currentBaseHP <= 0)
         {
-            loseScreen.SetActive(false);
+            loseScreen.SetActive(true);
             Time.timeScale = 0f;
         }
     }
