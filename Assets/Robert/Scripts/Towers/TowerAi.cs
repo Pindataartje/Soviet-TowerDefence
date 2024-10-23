@@ -108,17 +108,20 @@ public class TowerAi : MonoBehaviour
     {
         isShooting = true;
 
-        BulletParticle();
-        EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
-        GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
-
-        enemy.EnemyTakeDamage(damage);
-        if (enemy.enemyHealth <= 0)
+        if (targetsInArea[0] != null)
         {
-            int destroyedEnemyInArea = targetsInArea.IndexOf(enemy.gameObject);
-            targetsInArea.RemoveAt(destroyedEnemyInArea);
+            BulletParticle();
+            EnemyBehavior enemy = targetsInArea[0].GetComponent<EnemyBehavior>();
+            GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
+
+            enemy.EnemyTakeDamage(damage);
+            if (enemy.enemyHealth <= 0)
+            {
+                int destroyedEnemyInArea = targetsInArea.IndexOf(enemy.gameObject);
+                targetsInArea.RemoveAt(destroyedEnemyInArea);
+            }
+            Debug.Log("shooting");
         }
-        Debug.Log("shooting");
 
         yield return new WaitForSeconds(speed);
         isShooting = false;
@@ -168,11 +171,8 @@ public class TowerAi : MonoBehaviour
     #endregion
     public void BulletParticle()
     {
-        if (targetsInArea[0] != null)
-        {
-            particleParent.transform.LookAt(targetsInArea[0].transform.position);
-            bullet.Play();
-        }
+        particleParent.transform.LookAt(targetsInArea[0].transform.position);
+        bullet.Play();
     }
     public IEnumerator WaitForActivating(float waitTime)
     {

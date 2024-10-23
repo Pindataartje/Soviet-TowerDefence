@@ -275,8 +275,8 @@ MonoBehaviour:
   checkpointParent: {fileID: 0}
   checkPoints: []
   target: {x: 0, y: 0, z: 0}
-  enemyHealth: 300
-  killCash: 100
+  enemyHealth: 275
+  killCash: 225
   BaseDamage: 20
   hpBar: {fileID: 6623327161618680649}
 --- !u!195 &5882499424499013671
