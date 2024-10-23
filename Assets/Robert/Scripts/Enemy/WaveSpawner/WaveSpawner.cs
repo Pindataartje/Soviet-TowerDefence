@@ -109,7 +109,7 @@ public class WaveSpawner : MonoBehaviour
 
                 if (currentWave == 1)
                 {
-                    GameObject enemy = Instantiate(enemyPrefabs[e], spawnPoint.transform.position, spawnPoint.transform.rotation);
+                    GameObject enemy = Instantiate(enemyPrefabs[0], spawnPoint.transform.position, spawnPoint.transform.rotation);
                     enemies.Add(enemy);
                 }
                 if (currentWave >= 2)
