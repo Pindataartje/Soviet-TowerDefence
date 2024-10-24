@@ -6992,6 +6992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lose_WinScreenLVIV
       objectReference: {fileID: 0}
+    - target: {fileID: 3544133582923526528, guid: 02276ee3a4359af40a0738844909bc27,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226814710355193273, guid: 02276ee3a4359af40a0738844909bc27,
         type: 3}
       propertyPath: loadingScreen
