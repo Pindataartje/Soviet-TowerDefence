@@ -141,6 +141,7 @@ MonoBehaviour:
   costBoostPerUpgrade: 0
   sellvalue: 50
   maxAmountOfUpgrades: 0
+  timesUpgraded: 0
   damageBoost: 0
   fireRateBoost: 0
   radiusBoost: 0
@@ -173,7 +174,7 @@ MonoBehaviour:
   fireSpeed: 0
   radius: 0
   isBarbedWire: 1
-  speedDecrease: 2.5
+  speedDecrease: 2.8
   isMortar: 0
   mortarBulletAirTime: 0
   mortarBarrelParticle: {fileID: 0}
@@ -182,6 +183,8 @@ MonoBehaviour:
   isAmmunition: 0
   generateSpeed: 0
   ammunitionPerTick: 0
+  bulletWoosh: []
+  bulletWooshSource: {fileID: 0}
   activeTower: 0
 --- !u!65 &694090965676607971
 BoxCollider:

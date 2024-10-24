@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusVisual: {fileID: 8364941941640705725}
   upgradeCost: 225
-  costBoostPerUpgrade: 75
+  costBoostPerUpgrade: 100
   sellvalue: 200
   maxAmountOfUpgrades: 3
   timesUpgraded: 0
@@ -114,8 +114,8 @@ MonoBehaviour:
   radiusVisual: {fileID: 8364941941640705725}
   towerName: Bunker
   cost: 200
-  damage: 1.5
-  fireSpeed: 0.08
+  damage: 2.1
+  fireSpeed: 0.12
   radius: 15
   isBarbedWire: 0
   speedDecrease: 0

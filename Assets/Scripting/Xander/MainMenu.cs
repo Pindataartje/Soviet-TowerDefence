@@ -8,6 +8,12 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingScreen; // The loading screen image
     public Slider loadingSlider;     // The slider to show loading progress
 
+    // This method runs when the scene starts
+    private void Start()
+    {
+        Time.timeScale = 1f;  // Ensure time scale is set to normal (1) when the scene starts
+    }
+
     public void LoadSceneByIndex(int sceneIndex)
     {
         Time.timeScale = 1f; // Reset the time scale to normal in case the game is paused

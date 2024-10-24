@@ -135,8 +135,9 @@ MonoBehaviour:
   checkPoints: []
   target: {x: 0, y: 0, z: 0}
   enemyHealth: 80
-  killCash: 125
-  BaseDamage: 10
+  currentHealth: 0
+  killCash: 75
+  BaseDamage: 19
   hpBar: {fileID: 3771203757807273261}
 --- !u!195 &-1322883760109009408
 NavMeshAgent:

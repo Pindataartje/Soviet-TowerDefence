@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radiusVisual: {fileID: 6958409466623713341}
-  upgradeCost: 300
-  costBoostPerUpgrade: 150
+  upgradeCost: 400
+  costBoostPerUpgrade: 250
   sellvalue: 400
   maxAmountOfUpgrades: 3
   timesUpgraded: 0
@@ -80,10 +80,10 @@ MonoBehaviour:
   bullet: {fileID: 2889564009625253423}
   radiusVisual: {fileID: 6958409466623713341}
   towerName: Sniper
-  cost: 400
+  cost: 350
   damage: 35
   fireSpeed: 2.5
-  radius: 130
+  radius: 140
   isBarbedWire: 0
   speedDecrease: 0
   isMortar: 0
@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 397.30164
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 421.32565
+      value: 424.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da1ec85dbaf633e4e8443386d1229419,
         type: 3}
