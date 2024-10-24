@@ -151,6 +151,8 @@ public class TowerAi : MonoBehaviour
         mortarBarrelParticle.Play();
         mortarBullet.SetActive(true);
 
+        GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
+
         yield return new WaitForSeconds(airTime);
         mortarBullet.SetActive(false);
         mortarExplosion.Play();
@@ -158,10 +160,9 @@ public class TowerAi : MonoBehaviour
         foreach(GameObject enemy in targetsInArea)
         {
             EnemyBehavior enemyBehavior = enemy.GetComponent<EnemyBehavior>();
-            GetComponent<TowerOptions>().buildmenu.ammunition -= 1;
 
             enemyBehavior.EnemyTakeDamage(damage);
-            if (enemyBehavior.enemyHealth <= 0)
+            if (enemyBehavior.currentHealth <= 0)
             {
                 int destroyedEnemyInArea = targetsInArea.IndexOf(enemyBehavior.gameObject);
                 targetsInArea.RemoveAt(destroyedEnemyInArea);

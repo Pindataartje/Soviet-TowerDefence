@@ -145,6 +145,10 @@ public class TowerOptions : MonoBehaviour
 
                 }
 
+                if (timesUpgraded == maxAmountOfUpgrades)
+                    upgradeMenuUI.transform.GetChild(0).gameObject.SetActive(false);
+
+
                 SetUpgradeMenuData();
                 if (towerLVL != null)
                 {

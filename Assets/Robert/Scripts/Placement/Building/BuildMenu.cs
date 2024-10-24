@@ -5,6 +5,7 @@ using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class BuildMenu : MonoBehaviour
@@ -212,34 +213,37 @@ public class BuildMenu : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100))
         {
-            if (hit.transform.tag == "Tower")
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                if(hit.collider is MeshCollider)
+                if (hit.transform.tag == "Tower")
                 {
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    if (hit.collider is MeshCollider)
                     {
-                        if (!buildMenuIsOpen)
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            foreach (GameObject behavior in inMapTowerBehavior)
+                            if (!buildMenuIsOpen)
                             {
-                                behavior.GetComponent<TowerOptions>().TowerDeselect();
-
-                                if (!behavior.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                                foreach (GameObject behavior in inMapTowerBehavior)
                                 {
-                                    hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
+                                    behavior.GetComponent<TowerOptions>().TowerDeselect();
+
+                                    if (!behavior.GetComponent<TowerOptions>().towerOptionsIsOpen)
+                                    {
+                                        hit.transform.GetChild(0).GetComponent<TowerOptions>().TowerSelect();
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                else
                 {
-                    foreach (GameObject behavior in inMapTowerBehavior)
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
                     {
-                        behavior.GetComponent<TowerOptions>().TowerDeselect();
+                        foreach (GameObject behavior in inMapTowerBehavior)
+                        {
+                            behavior.GetComponent<TowerOptions>().TowerDeselect();
+                        }
                     }
                 }
             }
